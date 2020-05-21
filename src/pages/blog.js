@@ -26,7 +26,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <h1 className={blogStyles.title}>Blog</h1>
+      <h1 className={blogStyles.title}></h1>
       <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
