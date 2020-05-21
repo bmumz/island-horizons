@@ -2,15 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 
-const Home = () => {
+const Critters = () => {
   return (
     <Layout>
-      <h2>Welcome to Unchartia!</h2>
+      <h1>Critters</h1>
       <p>
-        <Link to="/contact">Contact Me.</Link>
+        About Island Living here.
+        <Link to="/contact">Contact</Link>
       </p>
     </Layout>
   )
 }
 
-export default Home
+export default Critters

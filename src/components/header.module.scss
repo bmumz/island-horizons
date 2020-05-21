@@ -1,0 +1,42 @@
+@font-face {
+  font-family: FinkHeavy;
+  src: url(./FinkHeavy.ttf);
+}
+
+.header {
+  // padding: 3rem 0 2rem;
+  // padding: 75px 0 50px;
+  width: 100%;
+  text-align: center;
+  // background-color: red;
+}
+
+.title {
+  color: #a6dbac;
+  font-family: "FinkHeavy";
+  font-size: 4rem;
+  text-decoration: none;
+  -webkit-text-stroke: 0.15px #229d6c;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+.nav-item {
+  color: #a6dbac;
+  font-family: "FinkHeavy";
+  font-size: 1rem;
+  margin-right: 1.3rem;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: #229d6c;
+}
+
+.active-nav-item {
+  color: #229d6c;
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: FinkHeavy;
+  src: url(../components/FinkHeavy.ttf);
+}
+
+.title {
+  color: #a6dbac;
+  padding: 1rem;
+  font-family: "FinkHeavy";
+}
+.posts {
+  list-style: none;
+  margin: 0;
+}
+
+.post {
+  margin: 1rem 0;
+
+  a {
+    // background: #f4f4f4;
+    color: #333333;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-family: "FinkHeavy";
+  }
+
+  h2:hover {
+    text-decoration: underline;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.date {
+  color: #777777;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.excerpt {
+  color: #666666;
+  font-size: 0.8rem;
+  width: 300px;
+}
