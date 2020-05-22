@@ -8,6 +8,8 @@
   // padding: 75px 0 50px;
   width: 100%;
   text-align: center;
+  text-decoration: none;
+  list-style: none;
   // background-color: red;
 }
 
@@ -15,22 +17,35 @@
   color: #a6dbac;
   font-family: "FinkHeavy";
   font-size: 4rem;
-  text-decoration: none;
   -webkit-text-stroke: 0.15px #229d6c;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  padding: 10px 20px;
+  margin-bottom: 1rem;
 }
 
 .nav-list {
-  display: flex;
-  list-style-type: none;
-  margin-left: 2rem;
+  position: relative;
 }
 
 .nav-item {
   color: #a6dbac;
   font-family: "FinkHeavy";
   font-size: 1rem;
-  margin-right: 1.3rem;
   text-decoration: none;
+  padding: 0 10px;
+}
+
+.nav-button {
+  color: #a6dbac;
+  font-family: inherit;
+  font-size: 100%;
+  border: 0;
+  text-decoration: none;
+  outline: none;
 }
 
 .nav-item:hover {
@@ -39,4 +54,25 @@
 
 .active-nav-item {
   color: #229d6c;
+}
+
+.menu-list {
+  display: flex;
+  background: rgba(255, 255, 255, 0.8);
+  flex-direction: column;
+  position: absolute;
+}
+
+.menu-item {
+  font-family: "FinkHeavy";
+  text-align: start;
+  text-decoration: none;
+  color: #a6dbac;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.menu-item:hover {
+  color: #229d6c;
+  display: block;
 }

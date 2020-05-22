@@ -1,14 +1,13 @@
 ---
-title: "The Great Post"
+title: "7 Things I wish I knew before starting my Animal Crossing adventure..."
 date: "May 19"
-excerpt: What is this? Will it work? Let's find out.
 ---
 
-Test
+# Animal Crossing
 
 ![ACNH](./ACNH.jpg)
 
-## Topics Covered
+## Things I wish I knew going in...
 
 1. Insects
 2. Fish

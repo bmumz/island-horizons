@@ -33,7 +33,7 @@ const Header = () => {
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
@@ -41,12 +41,12 @@ const Header = () => {
             >
               Blog
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
+              to="/critters"
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
-              to="/critters"
             >
               Critters
             </Link>

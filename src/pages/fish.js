@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 
-const Critters = () => {
+const Fish = () => {
   return (
     <Layout>
       <h1>Critters</h1>
@@ -14,4 +14,4 @@ const Critters = () => {
   )
 }
 
-export default Critters
+export default Fish

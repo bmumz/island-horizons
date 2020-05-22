@@ -5,7 +5,9 @@
 
 .title {
   color: #a6dbac;
-  padding: 1rem;
+  // padding: 1rem;
+  display: flex;
+  flex-direction: row;
   font-family: "FinkHeavy";
 }
 .posts {
@@ -46,5 +48,5 @@
 .excerpt {
   color: #666666;
   font-size: 0.8rem;
-  width: 300px;
+  // width: 200px;
 }

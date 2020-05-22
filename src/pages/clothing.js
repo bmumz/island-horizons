@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const CustomDesigns = () => {
+const Clothing = () => {
   return (
     <Layout>
       <h1>Contact</h1>
@@ -19,4 +19,4 @@ const CustomDesigns = () => {
   )
 }
 
-export default CustomDesigns
+export default Clothing
