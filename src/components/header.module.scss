@@ -9,8 +9,6 @@
   width: 100%;
   text-align: center;
   text-decoration: none;
-  list-style: none;
-  // background-color: red;
 }
 
 .title {
@@ -42,10 +40,10 @@
 .nav-button {
   color: #a6dbac;
   font-family: inherit;
-  font-size: 100%;
   border: 0;
   text-decoration: none;
   outline: none;
+  position: relative;
 }
 
 .nav-item:hover {
@@ -61,6 +59,7 @@
   background: rgba(255, 255, 255, 0.8);
   flex-direction: column;
   position: absolute;
+  width: 100%;
 }
 
 .menu-item {

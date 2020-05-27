@@ -28,11 +28,11 @@ const Navbar = () => {
         <NavItems
           navigationLinks={[
             {
-              navItemName: "home",
+              navItemName: "blog",
               navItemLink: "/",
             },
             {
-              navItemName: "critters",
+              navItemName: "critterpedia guide",
               menuItems: [
                 {
                   link: "/insects",
@@ -44,10 +44,10 @@ const Navbar = () => {
                 },
               ],
             },
-            {
-              navItemName: "diy recipes",
-              navItemLink: "/diyRecipes",
-            },
+            // {
+            //   navItemName: "diy recipes",
+            //   navItemLink: "/diyRecipes",
+            // },
             {
               navItemName: "custom designs",
               menuItems: [
@@ -70,7 +70,7 @@ const Navbar = () => {
 }
 
 const NavItems = props => {
-  return props.navigationLinks.map(item => {
+  return props.navigationLinks.map((item, index) => {
     let navItemContents
     if (item.navItemLink !== undefined) {
       navItemContents = (
@@ -91,7 +91,11 @@ const NavItems = props => {
       )
     }
 
-    return <div className={headerStyles.navItem}>{navItemContents}</div>
+    return (
+      <div key={index} className={headerStyles.navItem}>
+        {navItemContents}
+      </div>
+    )
   })
 }
 
@@ -111,8 +115,8 @@ const NavHover = props => {
 }
 
 const DropdownMenu = props => {
-  const links = props.items.map(item => (
-    <Link to={item.link} className={headerStyles.menuItem}>
+  const links = props.items.map((item, index) => (
+    <Link key={index} to={item.link} className={headerStyles.menuItem}>
       {item.name}
     </Link>
   ))

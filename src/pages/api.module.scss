@@ -1,0 +1,31 @@
+.parent-container {
+  text-align: center;
+}
+
+.critter-container {
+  // background-color: green;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 750px;
+}
+
+.critter {
+  height: 250px;
+  width: 180px;
+  border: 3px solid white;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.image {
+  width: 30%;
+  height: 30%;
+}
+
+.prices {
+  font-size: 14px;
+  text-align: start;
+}
