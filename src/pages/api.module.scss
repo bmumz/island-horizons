@@ -3,29 +3,59 @@
 }
 
 .critter-container {
-  // background-color: green;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 750px;
 }
 
-.critter {
-  height: 250px;
-  width: 180px;
-  border: 3px solid white;
+.critter-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  width: 182px;
+  height: 100%;
+  // max-height: 360px;
+  overflow: hidden;
 }
 
-.title {
-  text-transform: capitalize;
+.critter-name {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  display: flex;
+  height: 55px;
+  padding: 3px;
+  border-bottom: 1px solid #999999;
+  h4 {
+    text-transform: capitalize;
+    margin: 0;
+  }
 }
 
-.image {
-  width: 30%;
-  height: 30%;
+.critter-content {
+  padding: 3px;
 }
 
-.prices {
-  font-size: 14px;
-  text-align: start;
+.critter-image {
+  width: 50px;
+  height: 50px;
+}
+
+.critter-info {
+  font-size: 13px;
+  text-align: left;
+}
+
+.hemisphere-checkbox {
+  text-align: right;
+}
+
+.availabilityCenter {
+  font-weight: bold;
 }

@@ -48,19 +48,19 @@ const Navbar = () => {
             //   navItemName: "diy recipes",
             //   navItemLink: "/diyRecipes",
             // },
-            {
-              navItemName: "custom designs",
-              menuItems: [
-                {
-                  link: "/clothing",
-                  name: "clothes designs",
-                },
-                {
-                  link: "/paths",
-                  name: "path designs",
-                },
-              ],
-            },
+            // {
+            //   navItemName: "custom designs",
+            //   menuItems: [
+            //     {
+            //       link: "/clothing",
+            //       name: "clothes designs",
+            //     },
+            //     {
+            //       link: "/paths",
+            //       name: "path designs",
+            //     },
+            //   ],
+            // },
           ]}
         />
       </nav>

@@ -2,6 +2,7 @@ import React from "react"
 import { Component } from "react"
 // import { Link } from "gatsby"
 import apiStyles from "./api.module.scss"
+import Critters from "./critters"
 import Layout from "../components/layout"
 
 class Fish extends Component {
@@ -14,7 +15,6 @@ class Fish extends Component {
       .then(response => response.json())
       .then(results => {
         const items = Object.values(results)
-        console.log(results)
         this.setState({ items })
       })
   }
@@ -23,24 +23,7 @@ class Fish extends Component {
     return (
       <div className={apiStyles.parentContainer}>
         <Layout>
-          {items.map((item, index) => (
-            <div key={index} className={apiStyles.critterContainer}>
-              <div className={apiStyles.critter}>
-                <h4 className={apiStyles.title}>{item.name["name-USen"]}</h4>
-                <img
-                  className={apiStyles.image}
-                  src={item.icon_uri}
-                  alt={item.name["name-USen"]}
-                />
-                <div className={apiStyles.prices}>
-                  <b>Nook's Cranny: </b>
-                  {item.price} Bells
-                  <b> CJ: </b>
-                  {item["price-cj"]} Bells
-                </div>
-              </div>
-            </div>
-          ))}
+          <Critters critters={items} seller="price-cj" sellerName="CJ" />
         </Layout>
       </div>
     )
@@ -48,3 +31,7 @@ class Fish extends Component {
 }
 
 export default Fish
+
+// filter by: Location, shadow size
+// toggle for north/south hemisphere
+// if statement for availability
