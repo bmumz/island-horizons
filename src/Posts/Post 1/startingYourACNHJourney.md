@@ -1,9 +1,6 @@
 ---
 title: "8 Things I wish I knew before starting my Animal Crossing journey..."
 date: "May 25, 2020"
-output:
-  html_document:
-  css: style.css
 ---
 
 ### 1. Start planning your dream island early...

@@ -3,51 +3,28 @@ import { Component } from "react"
 import apiStyles from "./api.module.scss"
 
 class Critters extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      northern: false,
-      southern: false,
-    }
+  state = {
+    on: false,
   }
 
-  toggleNorthernState = () => {
-    const northern = !this.state.northern
+  toggle = () => {
     this.setState({
-      northern,
-    })
-  }
-
-  toggleSouthernState = () => {
-    const southern = !this.state.southern
-    this.setState({
-      southern,
+      on: !this.state.on,
     })
   }
 
   render() {
     let { critters, seller, sellerName } = this.props
     return (
-      <div>
-        <div className={apiStyles.hemisphereCheckbox}>
-          <div>
-            <input
-              type="checkbox"
-              name="hemisphere"
-              checked={this.state.northern}
-              onChange={this.toggleNorthernState}
-            />
-            Northern Hemisphere
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              name="hemisphere"
-              checked={this.state.southern}
-              onChange={this.toggleSouthernState}
-            />
-            Southern Hemisphere
-          </div>
+      <div className={apiStyles.cardContainer}>
+        <div className={apiStyles.hemisphereToggle}>
+          <option className={apiStyles.hemisphereOption}>Northern</option>
+          <label className={apiStyles.switch}>
+            {" "}
+            <input type="checkbox" onChange={this.toggle} />
+            <span className={apiStyles.slider}></span>
+          </label>
+          <option className={apiStyles.hemisphereOption}> Southern</option>
         </div>
         <div className={apiStyles.critterContainer}>
           {critters.map((item, index) => (
@@ -68,34 +45,28 @@ class Critters extends Component {
                   <b> {sellerName}: </b>
                   {item[seller]} Bells
                   <br />
-                  {this.state.northern ? (
+                  {!this.state.on ? (
                     <div>
                       <br />
                       <hr />
                       <div className={apiStyles.availabilityCenter}>
-                        Availability:{" "}
+                        Northern Availability:{" "}
                       </div>
-                      N: {item.availability["month-northern"]} <br />
+                      Months: {item.availability["month-northern"]} <br />
                       Time: {item.availability["time"]}
                     </div>
                   ) : (
-                    ""
-                  )}
-                  {this.state.southern ? (
                     <div>
                       {" "}
                       <br />
                       <hr />
                       <div className={apiStyles.availabilityCenter}>
-                        Availability:{" "}
+                        Southern Availability:{" "}
                       </div>
-                      <br />
-                      S: {item.availability["month-southern"]}
+                      Months: {item.availability["month-southern"]}
                       <br />
                       Time: {item.availability["time"]}
                     </div>
-                  ) : (
-                    ""
                   )}
                 </div>
               </div>

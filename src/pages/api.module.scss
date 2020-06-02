@@ -1,3 +1,68 @@
+.hemisphere-toggle {
+  // background-color: red;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.hemisphere-option {
+  font-size: 0.8rem;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 45px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a6dbac;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #229d6c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #229d6c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
 .parent-container {
   text-align: center;
 }
@@ -50,10 +115,6 @@
 .critter-info {
   font-size: 13px;
   text-align: left;
-}
-
-.hemisphere-checkbox {
-  text-align: right;
 }
 
 .availabilityCenter {

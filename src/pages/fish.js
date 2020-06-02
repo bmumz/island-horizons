@@ -18,6 +18,7 @@ class Fish extends Component {
         this.setState({ items })
       })
   }
+
   render() {
     let items = this.state.items || []
     return (
