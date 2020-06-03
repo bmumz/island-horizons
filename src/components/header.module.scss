@@ -20,6 +20,18 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  .title {
+    color: #a6dbac;
+    font-family: "FinkHeavy";
+    font-size: 4rem;
+    -webkit-text-stroke: 3px #229d6c;
+    paint-order: stroke fill;
+    text-decoration: none;
+  }
+}
+
 .navbar {
   display: flex;
   padding: 10px 20px;
