@@ -15,7 +15,8 @@
   color: #a6dbac;
   font-family: "FinkHeavy";
   font-size: 4rem;
-  -webkit-text-stroke: 0.15px #229d6c;
+  -webkit-text-stroke: 1px #229d6c;
+  paint-order: stroke fill;
   text-decoration: none;
 }
 
@@ -44,6 +45,7 @@
   text-decoration: none;
   outline: none;
   position: relative;
+  background-color: white;
 }
 
 .nav-item:hover {
