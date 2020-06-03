@@ -11,7 +11,7 @@ class Insects extends Component {
     this.state = { items: [] }
   }
   componentDidMount() {
-    fetch("http://acnhapi.com/v1/bugs/")
+    fetch("https://acnhapi.com/v1/bugs/")
       .then(response => response.json())
       .then(results => {
         const items = Object.values(results)

@@ -11,7 +11,7 @@ class Fish extends Component {
     this.state = { items: [] }
   }
   componentDidMount() {
-    fetch("http://acnhapi.com/v1/fish/")
+    fetch("https://acnhapi.com/v1/fish/")
       .then(response => response.json())
       .then(results => {
         const items = Object.values(results)
