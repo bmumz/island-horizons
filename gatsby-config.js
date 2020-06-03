@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Island Living",
+    title: "Island Horizons",
     author: "Brandi Mummery",
   },
 

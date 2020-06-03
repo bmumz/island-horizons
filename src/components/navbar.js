@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
         </h1>
       </header>
-      {/* <hr /> */}
+
       <nav className={headerStyles.navbar}>
         <NavItems
           navigationLinks={[
@@ -45,8 +45,8 @@ const Navbar = () => {
               ],
             },
             // {
-            //   navItemName: "diy recipes",
-            //   navItemLink: "/diyRecipes",
+            //   navItemName: "villagers guide",
+            //   navItemLink: "/villagers",
             // },
             // {
             //   navItemName: "custom designs",
