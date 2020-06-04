@@ -28,7 +28,8 @@ class Critters extends Component {
 
     if (search.length > 0) {
       collection = collection.filter(
-        item => this.getName(item).indexOf(search) !== -1
+        item =>
+          this.getName(item).toLowerCase().indexOf(search.toLowerCase()) !== -1
       )
     }
     return (

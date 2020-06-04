@@ -10,10 +10,6 @@
   flex-direction: row;
   font-family: "FinkHeavy";
 }
-.posts {
-  list-style: none;
-  margin: 0;
-}
 
 .post {
   margin: 1rem 0;
@@ -29,11 +25,14 @@
   h2 {
     margin-bottom: 0;
     font-family: "FinkHeavy";
+    letter-spacing: 1px;
+    max-width: 600px;
   }
 
-  h2:hover {
-    text-decoration: underline;
+  span:hover {
+    box-shadow: inset 0 -20px #a6dbac;
   }
+
   p {
     font-size: 0.9rem;
   }
@@ -46,7 +45,7 @@
 }
 
 .excerpt {
-  color: #666666;
+  color: #444444;
   font-size: 0.8rem;
   // width: 200px;
 }

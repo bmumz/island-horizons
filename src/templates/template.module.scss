@@ -1,9 +1,22 @@
-.next-prev-navigation {
-  display: flex;
-  justify-content: space-between;
+.published-date {
+  color: #777777;
+  padding: 3px;
 }
 
-Link {
-  text-decoration: none;
-  color: #333333;
+.blog-post {
+  margin-top: 2rem;
 }
+
+// .next-prev-navigation {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: #777777;
+// }
+
+// a:hover {
+//   color: #333333;
+// }
