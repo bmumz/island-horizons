@@ -36,7 +36,7 @@ const BlogTemplate = ({ data, pageContext }) => {
           {prev && <Link to={`blog/${prev.fields.slug}`}>Previous Post</Link>}
           <br />
         </div>
-        <div>
+        <div className={templateStyles.links}>
           {next && <Link to={`blog/${next.fields.slug}`}>Next Post</Link>}
         </div>
       </nav>
