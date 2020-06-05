@@ -5,7 +5,7 @@ export default class Time extends Component {
   render() {
     let time = this.props.children && this.props.children.toString()
 
-    if (time.length === 0) {
+    if (time && time.length === 0) {
       time = "All Day"
     }
 
