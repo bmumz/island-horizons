@@ -1,6 +1,8 @@
 import React from "react"
 import { Component } from "react"
 import critterStyles from "./critters.module.scss"
+import Month from "./month"
+import Time from "./time"
 
 class Critters extends Component {
   state = {
@@ -32,6 +34,12 @@ class Critters extends Component {
           this.getName(item).toLowerCase().indexOf(search.toLowerCase()) !== -1
       )
     }
+
+    let hemisphere = this.state.on
+      ? "Southern Availability"
+      : "Northern Availability"
+    let hemisphereIndex = this.state.on ? "month-southern" : "month-northern"
+
     return (
       <div className={critterStyles.critterBody}>
         <div className={critterStyles.critterNav}>
@@ -45,16 +53,14 @@ class Critters extends Component {
           </div>
 
           <div className={critterStyles.hemisphereToggle}>
-            <div className={critterStyles.hemisphereOption}>
-              <p>Northern</p>
-              <p>Southern</p>
-            </div>
-
             <label className={critterStyles.switch}>
-              {" "}
               <input type="checkbox" onChange={this.onToggle} />
               <span className={critterStyles.slider}></span>
             </label>
+            <div className={critterStyles.hemisphereOption}>
+              Northern <br />
+              Southern
+            </div>
           </div>
         </div>
 
@@ -83,32 +89,17 @@ class Critters extends Component {
                   <b> {sellerName}: </b>
                   {item[seller]} Bells
                   <br />
-                  <i class="fa fa-map-marker" aria-hidden="true" />{" "}
+                  <i className="fa fa-map-marker" aria-hidden="true" />{" "}
                   {item.availability["location"]}
                 </div>
                 <div className={critterStyles.critterInfo}>
-                  {!this.state.on ? (
-                    <div>
-                      <div className={critterStyles.availabilityCenter}>
-                        Northern Availability:{" "}
-                      </div>
-                      <i class="fa fa-calendar" aria-hidden="true" />{" "}
-                      {item.availability["month-northern"]} <br />
-                      <i class="fa fa-clock-o" aria-hidden="true" />{" "}
-                      {item.availability["time"]}
+                  <div>
+                    <div className={critterStyles.availabilityCenter}>
+                      {hemisphere}
                     </div>
-                  ) : (
-                    <div>
-                      <div className={critterStyles.availabilityCenter}>
-                        Southern Availability:{" "}
-                      </div>
-                      <i class="fa fa-calendar" aria-hidden="true" />{" "}
-                      {item.availability["month-southern"]}
-                      <br />
-                      <i class="fa fa-clock-o" aria-hidden="true" />{" "}
-                      {item.availability["time"]}
-                    </div>
-                  )}
+                    <Month>{item.availability[hemisphereIndex]}</Month>
+                    <Time>{item.availability["time"]}</Time>
+                  </div>
                 </div>
               </div>
             ))}

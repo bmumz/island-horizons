@@ -11,7 +11,7 @@
 
 .hemisphere-option {
   font-size: 0.8rem;
-  margin-right: 5px;
+  margin-left: 5px;
   margin-top: -5px;
 }
 
@@ -81,8 +81,8 @@ p {
 }
 
 .search-bar {
-  width: 175px;
   height: 30px;
+  margin: 10px;
 }
 
 .critter-container {
@@ -145,14 +145,15 @@ p {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
   .critter-card {
     width: 300px;
   }
 
-  .critter-container {
-    max-width: 300px;
+  .critter-image {
+    margin: 5px;
   }
+
   .critter-profile {
     width: 100px;
   }
@@ -162,21 +163,9 @@ p {
   }
 }
 
-@media only screen and (min-width: 375px) {
-  .critter-card {
-    width: 350px;
-  }
-
-  .critter-container {
-    max-width: 350px;
-  }
-  .critter-profile {
-    width: 100px;
-  }
-
-  .critter-name {
-    padding: 1px;
-  }
+.month,
+.time {
+  padding: 0 5px;
 }
 
 @media only screen and (min-width: 770px) {
