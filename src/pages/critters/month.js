@@ -25,7 +25,7 @@ export default class Month extends Component {
     if (monthsSplit.length > 1) {
       monthsSplit.forEach((item, index) => {
         if (index !== 0) {
-          const prev = monthsSplit[index - 1]
+          const prev = monthsSplit && monthsSplit[index - 1]
           // If previous and current is a number put a dash
           // Otherwise add a space
           if (!isNaN(prev) && !isNaN(item)) {
