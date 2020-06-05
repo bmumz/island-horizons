@@ -18,7 +18,7 @@ const monthsOfYear = [
 
 export default class Month extends Component {
   render() {
-    const months = this.props.children.toString()
+    const months = this.props.children && this.props.children.toString()
     const monthsSplit = months.split(/[ -]+/)
     let monthNames = ""
 
