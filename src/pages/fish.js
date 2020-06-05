@@ -1,8 +1,8 @@
 import React from "react"
 import { Component } from "react"
 // import { Link } from "gatsby"
-import apiStyles from "./api.module.scss"
-import Critters from "./critters"
+import critterStyles from "./critters/critters.module.scss"
+import Critters from "./critters/critters"
 import Layout from "../components/layout"
 
 class Fish extends Component {
@@ -22,7 +22,7 @@ class Fish extends Component {
   render() {
     let items = this.state.items || []
     return (
-      <div className={apiStyles.parentContainer}>
+      <div className={critterStyles.parentContainer}>
         <Layout>
           <Critters critters={items} seller="price-cj" sellerName="CJ" />
         </Layout>

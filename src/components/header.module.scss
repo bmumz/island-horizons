@@ -1,11 +1,9 @@
 @font-face {
   font-family: FinkHeavy;
-  src: url(./FinkHeavy.ttf);
+  src: url(./Fonts/FinkHeavy.ttf);
 }
 
 .header {
-  // padding: 3rem 0 2rem;
-  // padding: 75px 0 50px;
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -25,46 +23,6 @@
   color: #a6dbac;
 }
 
-// @media only screen and (max-width: 800px) {
-//   /* For mobile phones: */
-//   .title {
-//     color: #a6dbac;
-//     font-family: "FinkHeavy";
-//     font-size: 4rem;
-//     -webkit-text-stroke: 10px #229d6c;
-//     paint-order: stroke fill;
-//     text-decoration: none;
-//   }
-// }
-@media only screen and (max-width: 400px) {
-  /* For mobile phones: */
-  .title {
-    color: #a6dbac;
-    font-family: "FinkHeavy";
-    font-size: 3rem;
-    -webkit-text-stroke: 1px #229d6c;
-    -webkit-text-fill-color: #a6dbac;
-    text-decoration: none;
-  }
-  .nav-item {
-    color: #a6dbac;
-    font-family: "FinkHeavy";
-    font-size: 0.8rem;
-    text-decoration: none;
-    padding: 0 5px;
-  }
-
-  .nav-button {
-    color: #a6dbac;
-    font-family: inherit;
-    border: 0;
-    text-decoration: none;
-    outline: none;
-    position: relative;
-    background-color: white;
-  }
-}
-
 .navbar {
   display: flex;
   padding: 10px 20px;
@@ -78,9 +36,9 @@
 .nav-item {
   color: #a6dbac;
   font-family: "FinkHeavy";
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .nav-button {
@@ -121,4 +79,14 @@
 .menu-item:hover {
   color: #229d6c;
   display: block;
+}
+
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  .title {
+    font-size: 3rem;
+    -webkit-text-stroke: 2px #229d6c;
+    -webkit-text-fill-color: #a6dbac;
+    text-decoration: none;
+  }
 }

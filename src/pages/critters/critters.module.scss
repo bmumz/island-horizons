@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "fa-font";
+  src: url(../../components/Fonts/fontawesome-webfont.ttf);
+}
+
 .hemisphere-toggle {
-  // background-color: red;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -65,12 +69,6 @@ input:checked + .slider:before {
   transform: translateY(22px);
 }
 
-// .critter-body {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
 p {
   margin: 0;
   padding-top: 0;
@@ -79,8 +77,7 @@ p {
 .critter-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 75px;
+  justify-content: space-around;
 }
 
 .search-bar {
@@ -90,51 +87,46 @@ p {
 
 .critter-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  align-content: center;
   max-width: 750px;
 }
 
 .critter-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin: 15px;
+  padding: 10px;
   border: 1px solid #999999;
   border-radius: 5px;
-  width: 182px;
   height: 100%;
   overflow: hidden;
-  // transition: box-shadow 0.1s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  // max-height: 360px;
-  &:hover {
-    -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
-    transform: scale(1.05);
-  }
+}
+
+.critter-profile {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
 }
 
 .critter-name {
-  width: 100%;
+  margin-top: 10px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color: beige;
   display: flex;
-  height: 55px;
   padding: 3px;
-  border-bottom: 1px solid #999999;
   h4 {
     text-transform: capitalize;
     margin: 0;
   }
 }
 
-.critter-content {
-  padding: 3px;
-  text-align: center;
+.name-highlight {
+  box-shadow: inset 0 -10px beige;
 }
 
 .critter-image {
@@ -146,8 +138,55 @@ p {
 .critter-info {
   font-size: 12px;
   text-align: left;
+  padding: 3px;
 }
 
 .availabilityCenter {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 320px) {
+  .critter-card {
+    width: 300px;
+  }
+
+  .critter-container {
+    max-width: 300px;
+  }
+  .critter-profile {
+    width: 100px;
+  }
+
+  .critter-name {
+    padding: 1px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .critter-card {
+    width: 350px;
+  }
+
+  .critter-container {
+    max-width: 350px;
+  }
+  .critter-profile {
+    width: 100px;
+  }
+
+  .critter-name {
+    padding: 1px;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .critter-card {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      transform: scale(1.05);
+    }
+  }
 }
