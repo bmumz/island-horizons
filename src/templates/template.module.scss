@@ -1,13 +1,11 @@
 h1 {
   font-family: FinkHeavy;
+  margin-bottom: 0px;
 }
 
-h4 {
-  padding-top: 15px;
-}
-
-p {
-  padding-bottom: 15px;
+h3 {
+  margin-top: 20px;
+  margin-bottom: 5 px;
 }
 
 .published-date {
@@ -20,7 +18,8 @@ p {
 
 ul {
   text-align: left;
-  list-style: outside;
+  margin-top: 20px;
+  list-style: none;
 }
 
 // .next-prev-navigation {

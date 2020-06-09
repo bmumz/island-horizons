@@ -18,15 +18,15 @@ export const query = graphql`
 `
 
 const BlogTemplate = props => {
-  // const options = {
-  //   renderNode: {
-  //     "embedded-asset-block": node => {
-  //       const alt = node.data.target.fields.title["en-US"]
-  //       const url = node.data.target.fields.file["en-US"].url
-  //       return <img src={url} alt={alt} />
-  //     },
-  //   },
-  // }
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        const alt = node.data.target.fields.title["en-US"]
+        const url = node.data.target.fields.file["en-US"].url
+        return <img alt={alt} src={url} />
+      },
+    },
+  }
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
@@ -35,7 +35,10 @@ const BlogTemplate = props => {
         {props.data.contentfulBlogPost.publishedDate}
       </i>
       <div className={templateStyles.blogPost}>
-        {documentToReactComponents(props.data.contentfulBlogPost.body.json)}
+        {documentToReactComponents(
+          props.data.contentfulBlogPost.body.json,
+          options
+        )}
       </div>
 
       {/* <nav className={templateStyles.nextPrevNavigation}>
