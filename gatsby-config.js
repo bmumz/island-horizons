@@ -8,10 +8,14 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Island Horizons",
+    description: "An Animal Crossing New Horizons fan-blog.",
+    url: "https://www.islandhorizons.com",
+    image: "",
     author: "Brandi Mummery",
   },
 
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -29,13 +33,6 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-    },
     {
       resolve: "gatsby-transformer-remark",
       options: {

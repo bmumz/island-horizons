@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import critterStyles from "./critters.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons"
 
 const monthsOfYear = [
   "Jan",
@@ -48,7 +50,7 @@ export default class Month extends Component {
 
     return (
       <div>
-        <i className="fa fa-calendar" aria-hidden="true" />
+        <FontAwesomeIcon icon={faCalendarAlt} />
         <span className={critterStyles.month}>{monthNames}</span>
       </div>
     )

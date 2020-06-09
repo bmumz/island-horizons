@@ -1,10 +1,26 @@
+h1 {
+  font-family: FinkHeavy;
+}
+
+h4 {
+  padding-top: 15px;
+}
+
+p {
+  padding-bottom: 15px;
+}
+
 .published-date {
   color: #777777;
-  padding: 3px;
 }
 
 .blog-post {
-  margin-top: 2rem;
+  margin-top: 30px;
+}
+
+ul {
+  text-align: left;
+  list-style: outside;
 }
 
 // .next-prev-navigation {

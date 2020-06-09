@@ -3,6 +3,9 @@ import { Component } from "react"
 import critterStyles from "./critters.module.scss"
 import Month from "./month"
 import Time from "./time"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+// import Sort from "./sort"
 
 class Critters extends Component {
   state = {
@@ -89,7 +92,7 @@ class Critters extends Component {
                   <b> {sellerName}: </b>
                   {item[seller]} Bells
                   <br />
-                  <i className="fa fa-map-marker" aria-hidden="true" />{" "}
+                  <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
                   {item.availability["location"]}
                 </div>
                 <div className={critterStyles.critterInfo}>

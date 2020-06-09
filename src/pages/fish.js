@@ -1,9 +1,9 @@
 import React from "react"
 import { Component } from "react"
-// import { Link } from "gatsby"
 import critterStyles from "./critters/critters.module.scss"
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 class Fish extends Component {
   constructor() {
@@ -24,6 +24,7 @@ class Fish extends Component {
     return (
       <div className={critterStyles.parentContainer}>
         <Layout>
+          <Head title="Fish Guide" />
           <Critters critters={items} seller="price-cj" sellerName="CJ" />
         </Layout>
       </div>

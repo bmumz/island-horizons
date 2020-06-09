@@ -4,6 +4,7 @@ import critterStyles from "./critters/critters.module.scss"
 // import { Link } from "gatsby"
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 class Insects extends Component {
   constructor() {
@@ -23,6 +24,7 @@ class Insects extends Component {
     return (
       <div className={critterStyles.parentContainer}>
         <Layout>
+          <Head title="Insects Guide" />
           <Critters critters={items} seller="price-flick" sellerName="Flick" />
         </Layout>
       </div>
