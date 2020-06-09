@@ -33,9 +33,9 @@ const Home = () => {
                   {edge.node.title}
                 </span>
               </h2>
-              <p className={blogStyles.date}>{edge.node.publishedDate}</p>
+              <div className={blogStyles.date}>{edge.node.publishedDate}</div>
 
-              <p className={blogStyles.excerpt}>{edge.node.excerpt}</p>
+              <div className={blogStyles.excerpt}>{edge.node.excerpt}</div>
             </Link>
             <hr />
           </div>

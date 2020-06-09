@@ -5,24 +5,20 @@
 
 .title {
   color: #a6dbac;
-  // padding: 1rem;
   display: flex;
   flex-direction: row;
   font-family: "FinkHeavy";
 }
 
 .post {
-  margin: 1rem 0;
-
   a {
     color: #333333;
-    display: block;
-    padding: 1rem;
     text-decoration: none;
   }
 
   .blogPostTitle {
     margin-bottom: 0;
+    margin-top: 0;
     font-family: "FinkHeavy";
     letter-spacing: 1px;
     max-width: 600px;
@@ -34,6 +30,7 @@
 
   p {
     font-size: 0.9rem;
+    margin: 0;
   }
 }
 
