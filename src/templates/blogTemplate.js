@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import templateStyles from "./template.module.scss"
+
 import Head from "../components/head"
 
 export const query = graphql`
@@ -10,6 +11,8 @@ export const query = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedDate(formatString: "MMMM Do, YYYY")
+      excerpt
+      tags
       body {
         json
       }
@@ -29,7 +32,15 @@ const BlogTemplate = props => {
   }
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <Head title={props.data.contentfulBlogPost.title}>
+        <meta name="title" content={props.data.contentfulBlogPost.title} />
+        <meta
+          name="description"
+          content={props.data.contentfulBlogPost.excerpt}
+        />
+        <meta name="keywords" content={props.data.contentfulBlogPost.tags} />
+      </Head>
+
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <i className={templateStyles.publishedDate}>
         {props.data.contentfulBlogPost.publishedDate}

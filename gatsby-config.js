@@ -9,6 +9,8 @@ module.exports = {
   siteMetadata: {
     title: "Island Horizons",
     description: "An Animal Crossing New Horizons fan-blog.",
+    keywords:
+      "Animal Crossing, ACNH, New Horizons, Animal Crossing New Horizons, Animal Crossing help, Animal Crossing blog, Island Living, Animal Crossing fan-blog, DIY, React, Gatsby, blog",
     url: "https://www.islandhorizons.com",
     image: "",
     author: "Brandi Mummery",
