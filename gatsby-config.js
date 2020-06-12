@@ -9,14 +9,32 @@ module.exports = {
   siteMetadata: {
     title: "Island Horizons",
     description: "An Animal Crossing New Horizons fan-blog.",
-    keywords:
-      "Animal Crossing, ACNH, New Horizons, Animal Crossing New Horizons, Animal Crossing help, Animal Crossing blog, Island Living, Animal Crossing fan-blog, DIY, React, Gatsby, blog",
-    url: "https://www.islandhorizons.com",
-    image: "",
+    keywords: [
+      "Animal Crossing",
+      "ACNH",
+      "New Horizons",
+      "Animal Crossing New Horizons",
+      "Critterpedia",
+      "critters",
+      "fishing",
+      "catching",
+      "Animal Crossing help",
+      "Animal Crossing blog",
+      "blog",
+      "Island Horizons",
+      "Animal Crossing fan-blog",
+      "DIY",
+      "DIY recipes",
+      "custom paths",
+      "React",
+      "Gatsby",
+    ],
+    siteUrl: "https://www.islandhorizons.com",
     author: "Brandi Mummery",
   },
 
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -34,14 +52,14 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "src",
-        path: `${__dirname}/src/`,
+        name: `images`,
+        path: `${__dirname}/src/Images`,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
