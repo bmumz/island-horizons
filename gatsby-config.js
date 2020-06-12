@@ -51,13 +51,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/Images`,
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
