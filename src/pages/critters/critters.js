@@ -5,6 +5,7 @@ import Month from "./month"
 import Time from "./time"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 // import Sort from "./sort"
 
 class Critters extends Component {
@@ -12,11 +13,18 @@ class Critters extends Component {
     on: false,
     search: "",
     items: [],
+    searchToggle: false,
   }
 
   onToggle = () => {
     this.setState({
       on: !this.state.on,
+    })
+  }
+
+  searchToggle = () => {
+    this.setState({
+      searchToggle: !this.state.searchToggle,
     })
   }
 
@@ -46,15 +54,26 @@ class Critters extends Component {
     return (
       <div className={critterStyles.critterBody}>
         <div className={critterStyles.critterNav}>
-          <div className={critterStyles.searchBar}>
-            <input
-              type="text"
-              onChange={this.onSearch}
-              className={critterStyles.searchBar}
-              placeholder="Search"
-            />
+          <div className={critterStyles.searchParent}>
+            <div className={critterStyles.searchContainer}>
+              <button
+                className={critterStyles.searchButton}
+                onClick={this.searchToggle}
+              >
+                <FontAwesomeIcon icon={faSearch} color="#229d6c" />
+              </button>
+              {this.state.searchToggle && (
+                <div>
+                  <input
+                    type="text"
+                    className={critterStyles.searchBar}
+                    onChange={this.onSearch}
+                    placeholder="Search"
+                  />
+                </div>
+              )}
+            </div>
           </div>
-
           <div className={critterStyles.hemisphereToggle}>
             <label className={critterStyles.switch}>
               <input type="checkbox" onChange={this.onToggle} />
