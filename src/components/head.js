@@ -11,7 +11,7 @@ const Head = ({ title }) => {
           description
           author
           keywords
-          url
+          siteUrl
         }
       }
     }
