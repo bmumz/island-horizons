@@ -18,6 +18,7 @@ const Head = ({ title }) => {
   `)
   return (
     <Helmet>
+      <html lang="en" />
       <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
       <meta name="keywords" content={data.site.siteMetadata.keywords} />

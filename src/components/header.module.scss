@@ -7,6 +7,7 @@
   width: 100%;
   text-align: center;
   text-decoration: none;
+  position: relative;
 }
 
 .title {
@@ -16,6 +17,15 @@
   text-decoration: none;
   -webkit-text-stroke: 1px #229d6c;
   -webkit-text-fill-color: #a6dbac;
+  // position: absolute;
+  // top: 200px;
+  // left: 0;
+  width: 100%;
+}
+
+.header-image {
+  position: relative;
+  height: 200px;
 }
 
 .title:hover {

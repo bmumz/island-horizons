@@ -60,7 +60,11 @@ class Critters extends Component {
                 className={critterStyles.searchButton}
                 onClick={this.searchToggle}
               >
-                <FontAwesomeIcon icon={faSearch} color="#229d6c" />
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  color="#229d6c"
+                  className={critterStyles.searchIcon}
+                />
               </button>
               {this.state.searchToggle && (
                 <div>

@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Island Horizons",
+    language: "English",
     description: "An Animal Crossing New Horizons fan-blog.",
     keywords: [
       "Animal Crossing",
@@ -40,6 +41,13 @@ module.exports = {
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images",
       },
     },
     "gatsby-plugin-react-helmet",

@@ -1,13 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
-const NotFound = () => {
+const NotFound = props => {
   return (
     <Layout>
-      <Head title="404 Not Found" />
-      <h1>Page not found!</h1>
+      <Head title="404 Error: Page Not Found" />
+      <h1>404 Error: Page not found!</h1>
+      <Img fluid={props.data.errorImage.childImageSharp.fluid} />
       <p>
         <Link to="/">Head home</Link>
       </p>
@@ -16,3 +18,24 @@ const NotFound = () => {
 }
 
 export default NotFound
+
+export const data = graphql`
+  query {
+    errorImage: file(relativePath: { eq: "notFound.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          base64
+          tracedSVG
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+          originalImg
+          originalName
+        }
+      }
+    }
+  }
+`

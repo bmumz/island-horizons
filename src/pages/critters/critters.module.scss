@@ -97,6 +97,9 @@ p {
   flex-direction: row-reverse;
 }
 
+.search-icon {
+  position: relative;
+}
 .search-button {
   border: transparent;
   background-color: rgba(166, 219, 172, 0.75);
@@ -189,6 +192,10 @@ p {
 }
 
 @media only screen and (max-width: 375px) {
+  .search-bar {
+    margin-right: -5px;
+  }
+
   .critter-card {
     width: 300px;
   }
