@@ -70,6 +70,7 @@ class Critters extends Component {
                 <div>
                   <input
                     type="text"
+                    value={this.state.search}
                     className={critterStyles.searchBar}
                     onChange={this.onSearch}
                     placeholder="Search"

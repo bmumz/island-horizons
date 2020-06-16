@@ -1,3 +1,12 @@
+//SECONDARY NAVIGATION
+.critter-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+//TOGGLE FOR HEMISPHERES
 .hemisphere-toggle {
   display: flex;
   flex-direction: row;
@@ -84,13 +93,7 @@ p {
   padding-top: 0;
 }
 
-.critter-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 50px;
-}
-
+//SEARCH BAR
 .search-container {
   margin-top: 15px;
   display: flex;
@@ -101,6 +104,7 @@ p {
   position: relative;
 }
 .search-button {
+  position: absolute;
   border: transparent;
   background-color: rgba(166, 219, 172, 0.75);
   cursor: pointer;
@@ -123,14 +127,18 @@ p {
   border-left: 1px solid #ccc;
   border-radius: 20px 0 0 20px;
   border-right: transparent;
-  margin-right: -10px;
-  width: 150px;
+  margin-right: 20px;
+  // width: 180px;
   background-color: transparent;
   cursor: auto;
   outline: none;
   margin-top: 2px;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
+//CRITTER COMPONENT
 .critter-container {
   display: flex;
   flex-direction: column;
@@ -193,7 +201,12 @@ p {
 
 @media only screen and (max-width: 375px) {
   .search-bar {
-    margin-right: -5px;
+    margin-right: 0px;
+  }
+
+  .search-icon {
+    position: relative;
+    text-align: center;
   }
 
   .critter-card {
