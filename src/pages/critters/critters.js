@@ -5,8 +5,6 @@ import Month from "./month"
 import Time from "./time"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
-// import Sort from "./sort"
 
 class Critters extends Component {
   state = {
@@ -14,6 +12,7 @@ class Critters extends Component {
     search: "",
     items: [],
     searchToggle: false,
+    sort: true,
   }
 
   onToggle = () => {
@@ -22,9 +21,9 @@ class Critters extends Component {
     })
   }
 
-  searchToggle = () => {
+  onSort = () => {
     this.setState({
-      searchToggle: !this.state.searchToggle,
+      on: this.state.sortPrice,
     })
   }
 
@@ -46,6 +45,12 @@ class Critters extends Component {
       )
     }
 
+    collection.sort((a, b) => {
+      const asc = a.price < b.price ? 1 : -1
+      const desc = a.price > b.price ? 1 : -1
+      return this.state.sortPrice ? desc : asc
+    })
+
     let hemisphere = this.state.on
       ? "Southern Availability"
       : "Northern Availability"
@@ -56,27 +61,16 @@ class Critters extends Component {
         <div className={critterStyles.critterNav}>
           <div className={critterStyles.searchParent}>
             <div className={critterStyles.searchContainer}>
-              <button
-                className={critterStyles.searchButton}
-                onClick={this.searchToggle}
-              >
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  color="#229d6c"
-                  className={critterStyles.searchIcon}
+              <div>
+                <input
+                  type="text"
+                  value={this.state.search}
+                  className={critterStyles.searchBar}
+                  onChange={this.onSearch}
+                  placeholder="Search"
+                  maxLength="25"
                 />
-              </button>
-              {this.state.searchToggle && (
-                <div>
-                  <input
-                    type="text"
-                    value={this.state.search}
-                    className={critterStyles.searchBar}
-                    onChange={this.onSearch}
-                    placeholder="Search"
-                  />
-                </div>
-              )}
+              </div>
             </div>
           </div>
           <div className={critterStyles.hemisphereToggle}>

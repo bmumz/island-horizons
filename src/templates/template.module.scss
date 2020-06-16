@@ -18,20 +18,20 @@ h3 {
 
 ul {
   text-align: left;
-  margin-top: 20px;
+  margin: 20px;
   list-style: none;
 }
 
-// .next-prev-navigation {
-//   display: flex;
-//   justify-content: space-between;
-// }
+ol {
+  margin: 20px;
+  text-align: left;
+}
 
-// a {
-//   text-decoration: none;
-//   color: #777777;
-// }
+a {
+  color: #666666;
+}
 
-// a:hover {
-//   color: #333333;
-// }
+a:hover {
+  color: #333333;
+  background-color: #a6dbac;
+}
