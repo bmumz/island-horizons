@@ -45,11 +45,12 @@ class Critters extends Component {
       )
     }
 
-    collection.sort((a, b) => {
-      const asc = a.price < b.price ? 1 : -1
-      const desc = a.price > b.price ? 1 : -1
-      return this.state.sortPrice ? desc : asc
-    })
+    collection &&
+      collection.sort((a, b) => {
+        const asc = a.price < b.price ? 1 : -1
+        const desc = a.price > b.price ? 1 : -1
+        return this.state.sortPrice ? desc : asc
+      })
 
     let hemisphere = this.state.on
       ? "Southern Availability"
