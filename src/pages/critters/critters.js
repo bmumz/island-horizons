@@ -32,7 +32,7 @@ class Critters extends Component {
 
   render() {
     let { critters, seller, sellerName } = this.props
-    let collection = [...critters]
+    let collection = critters && [...critters]
     let search = this.state.search
 
     if (search.length > 0) {
