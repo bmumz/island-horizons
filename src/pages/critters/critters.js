@@ -50,7 +50,7 @@ class Critters extends Component {
     if (this.state.isSort && collection) {
       collection.sort((a, b) => (a.price < b.price ? 1 : -1))
     } else {
-      collection = [...critters]
+      collection = critters && [...critters]
     }
 
     return (
