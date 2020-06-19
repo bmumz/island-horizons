@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <Head title="Home" />
+      <Head title="Home" keywords="" description="" />
       <h4 className={blogStyles.title}>Recent Posts</h4>
       {data.allContentfulBlogPost.edges.map(edge => {
         return (

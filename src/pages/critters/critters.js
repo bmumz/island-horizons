@@ -11,8 +11,7 @@ class Critters extends Component {
     on: false,
     search: "",
     items: [],
-    searchToggle: false,
-    sort: true,
+    isSort: false,
   }
 
   onToggle = () => {
@@ -21,10 +20,8 @@ class Critters extends Component {
     })
   }
 
-  onSort = () => {
-    this.setState({
-      on: this.state.sortPrice,
-    })
+  onSort = event => {
+    this.setState({ isSort: event.target.checked })
   }
 
   onSearch = event => {
@@ -35,7 +32,7 @@ class Critters extends Component {
 
   render() {
     let { critters, seller, sellerName } = this.props
-    let collection = critters
+    let collection = [...critters]
     let search = this.state.search
 
     if (search.length > 0) {
@@ -45,35 +42,40 @@ class Critters extends Component {
       )
     }
 
-    collection &&
-      collection.sort((a, b) => {
-        const asc = a.price < b.price ? 1 : -1
-        const desc = a.price > b.price ? 1 : -1
-        return this.state.sortPrice ? desc : asc
-      })
-
     let hemisphere = this.state.on
       ? "Southern Availability"
       : "Northern Availability"
     let hemisphereIndex = this.state.on ? "month-southern" : "month-northern"
 
+    if (this.state.isSort && collection) {
+      collection.sort((a, b) => (a.price < b.price ? 1 : -1))
+    } else {
+      collection = [...critters]
+    }
+
     return (
       <div className={critterStyles.critterBody}>
         <div className={critterStyles.critterNav}>
-          <div className={critterStyles.searchParent}>
-            <div className={critterStyles.searchContainer}>
-              <div>
-                <input
-                  type="text"
-                  value={this.state.search}
-                  className={critterStyles.searchBar}
-                  onChange={this.onSearch}
-                  placeholder="Search"
-                  maxLength="25"
-                />
-              </div>
+          <div className={critterStyles.searchContainer}>
+            <input
+              type="text"
+              value={this.state.search}
+              onChange={this.onSearch}
+              className={critterStyles.searchBar}
+              placeholder="Search"
+              maxLength="25"
+            />
+            <div className={critterStyles.sortFont}>
+              <input
+                type="checkbox"
+                onClick={this.onSort}
+                className={critterStyles.sortPrice}
+              />
+              Sort by Price <br />
+              (Highest to Lowest)
             </div>
           </div>
+
           <div className={critterStyles.hemisphereToggle}>
             <label className={critterStyles.switch}>
               <input type="checkbox" onChange={this.onToggle} />

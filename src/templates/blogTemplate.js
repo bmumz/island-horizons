@@ -32,14 +32,11 @@ const BlogTemplate = props => {
   }
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title}>
-        <meta name="title" content={props.data.contentfulBlogPost.title} />
-        <meta
-          name="description"
-          content={props.data.contentfulBlogPost.excerpt}
-        />
-        <meta name="keywords" content={props.data.contentfulBlogPost.tags} />
-      </Head>
+      <Head
+        title={props.data.contentfulBlogPost.title}
+        keywords={props.data.contentfulBlogPost.tags}
+        description={props.data.contentfulBlogPost.excerpt}
+      ></Head>
 
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <i className={templateStyles.publishedDate}>

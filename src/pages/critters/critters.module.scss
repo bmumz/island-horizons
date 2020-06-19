@@ -2,15 +2,16 @@
 .critter-nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 50px;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
 //TOGGLE FOR HEMISPHERES
 .hemisphere-toggle {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .hemisphere-option {
@@ -94,30 +95,12 @@ p {
 }
 
 //SEARCH BAR
+// .search-container {
+//   margin-top: 15px;
+// }
 .search-container {
-  margin-top: 15px;
   display: flex;
-  flex-direction: row-reverse;
-}
-
-.search-icon {
-  position: relative;
-}
-.search-button {
-  position: absolute;
-  border: transparent;
-  background-color: rgba(166, 219, 172, 0.75);
-  cursor: pointer;
-  outline: none;
-  height: 35px;
-  width: 35px;
-  -webkit-border-radius: 10em;
-  -moz-border-radius: 10em;
-  border-radius: 10em;
-  -webkit-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  background-color: #a6dbac;
+  flex-direction: row;
 }
 
 .search-bar {
@@ -129,10 +112,31 @@ p {
   background-color: transparent;
   cursor: auto;
   outline: none;
-  margin-top: 2px;
-  padding: 2px;
+  margin: 15px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.sort-price {
+  // margin-top: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  margin-right: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.sort-font {
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+}
+.sort-check:active {
+  -webkit-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
+  background-color: #229d6c;
 }
 
 //CRITTER COMPONENT
