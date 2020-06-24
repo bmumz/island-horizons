@@ -1,3 +1,10 @@
+@font-face {
+  font-family: FinkHeavy;
+  src: url(../../fonts/FinkHeavy.ttf) format("ttf"),
+    url(../../fonts/FinkHeavy.woff) format("woff"),
+    url(../../fonts/FinkHeavy.woff2) format("woff2");
+}
+
 //SECONDARY NAVIGATION
 .critter-nav {
   display: flex;
@@ -115,6 +122,7 @@ p {
   margin: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: white;
 }
 
 .sort-price {
@@ -158,6 +166,7 @@ p {
   border-radius: 5px;
   height: 100%;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .critter-profile {
@@ -174,10 +183,10 @@ p {
   align-items: center;
   display: flex;
   padding: 3px;
-  h4 {
-    text-transform: capitalize;
-    margin: 0;
-  }
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: FinkHeavy;
+  margin: 0;
 }
 
 .name-highlight {
@@ -201,6 +210,23 @@ p {
 }
 
 @media only screen and (max-width: 375px) {
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .sort-font {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+
+  .search-bar {
+    height: 35px;
+    margin: 0;
+  }
   .critter-card {
     width: 300px;
   }

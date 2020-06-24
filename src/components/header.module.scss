@@ -7,9 +7,12 @@
 
 .header {
   width: 100%;
-  text-align: center;
   text-decoration: none;
   position: relative;
+  text-align: center;
+}
+
+.header-img {
 }
 
 .title {
@@ -19,10 +22,8 @@
   text-decoration: none;
   -webkit-text-stroke: 1px #229d6c;
   -webkit-text-fill-color: #a6dbac;
-  // position: absolute;
-  // top: 200px;
-  // left: 0;
-  width: 100%;
+
+  // width: 100%;
 }
 
 .header-image {
@@ -60,7 +61,8 @@
   text-decoration: none;
   outline: none;
   position: relative;
-  background-color: white;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .nav-item:hover {

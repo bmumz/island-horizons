@@ -1,0 +1,82 @@
+@font-face {
+  font-family: FinkHeavy;
+  src: url(../fonts/FinkHeavy.ttf) format("ttf"),
+    url(../fonts/FinkHeavy.woff) format("woff"),
+    url(../fonts/FinkHeavy.woff2) format("woff2");
+}
+
+.villager-container {
+  max-width: 750px;
+  align-self: center;
+}
+
+.search-container {
+  align-self: center;
+}
+
+.search-bar {
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: auto;
+  outline: none;
+  margin: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 550px;
+  background-color: white;
+}
+
+.villager-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  height: 100%;
+  overflow: hidden;
+  width: 550px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.villager-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.villager-name {
+  font-family: "FinkHeavy";
+  font-size: 25px;
+  padding: 5px;
+}
+
+.name-highlight {
+  box-shadow: inset 0 -13px #a6dbac;
+}
+.villager-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 770px) {
+  .villager-card {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+      transform: scale(1.05);
+    }
+  }
+}

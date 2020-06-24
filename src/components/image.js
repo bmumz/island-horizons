@@ -7,9 +7,9 @@ import headerStyles from "./header.module.scss"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      headerImage: file(relativePath: { eq: "header.jpg" }) {
+      headerImage: file(relativePath: { eq: "header.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(quality: 100) {
             base64
             tracedSVG
             aspectRatio
@@ -28,12 +28,12 @@ const Image = () => {
 
   return (
     <div className={headerStyles.header}>
-      {/* <Img fluid={data.headerImage.childImageSharp.fluid} /> */}
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          Island Horizons
-        </Link>
-      </h1>
+      <Link to="/">
+        {/* <Img
+          fluid={data.headerImage.childImageSharp.fluid}
+          className={headerStyles.headerImg}
+        /> */}
+      </Link>
     </div>
   )
 }

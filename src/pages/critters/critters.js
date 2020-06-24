@@ -14,9 +14,9 @@ class Critters extends Component {
     isSort: false,
   }
 
-  onToggle = () => {
+  onToggle = event => {
     this.setState({
-      on: !this.state.on,
+      on: event.target.checked,
     })
   }
 
@@ -75,7 +75,6 @@ class Critters extends Component {
               (Highest to Lowest)
             </div>
           </div>
-
           <div className={critterStyles.hemisphereToggle}>
             <label className={critterStyles.switch}>
               <input type="checkbox" onChange={this.onToggle} />
@@ -94,11 +93,12 @@ class Critters extends Component {
               <div key={index} className={critterStyles.critterCard}>
                 <div className={critterStyles.critterProfile}>
                   <div className={critterStyles.critterName}>
-                    <h4>
+                    <p>
+                      {" "}
                       <span className={critterStyles.nameHighlight}>
                         {this.getName(item)}
                       </span>
-                    </h4>
+                    </p>
                   </div>
                   <img
                     className={critterStyles.critterImage}

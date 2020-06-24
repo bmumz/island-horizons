@@ -1,15 +1,20 @@
 .container {
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 3rem;
+  // margin: 0 auto;
+  // max-width: 750px;
+  // background-image: url("https://i.ibb.co/g44q9nY/grassbg.jpg");
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  padding-top: 4rem;
 }
 
 .content {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 4rem;
+  max-width: 750px;
+  padding: 3rem;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 400px) {
