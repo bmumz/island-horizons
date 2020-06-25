@@ -7,7 +7,7 @@ import headerStyles from "./header.module.scss"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      headerImage: file(relativePath: { eq: "header.png" }) {
+      headerImage: file(relativePath: { eq: "woodheader.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             base64
@@ -29,10 +29,10 @@ const Image = () => {
   return (
     <div className={headerStyles.header}>
       <Link to="/">
-        {/* <Img
+        <Img
           fluid={data.headerImage.childImageSharp.fluid}
           className={headerStyles.headerImg}
-        /> */}
+        />
       </Link>
     </div>
   )

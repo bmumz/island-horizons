@@ -38,7 +38,9 @@ const BlogTemplate = props => {
         description={props.data.contentfulBlogPost.excerpt}
       ></Head>
 
-      <h1>{props.data.contentfulBlogPost.title}</h1>
+      <p className={templateStyles.blogTitle}>
+        {props.data.contentfulBlogPost.title}
+      </p>
       <i className={templateStyles.publishedDate}>
         {props.data.contentfulBlogPost.publishedDate}
       </i>
@@ -48,18 +50,6 @@ const BlogTemplate = props => {
           options
         )}
       </div>
-
-      {/* <nav className={templateStyles.nextPrevNavigation}>
-        <div className={templateStyles.links}>
-          {previous && (
-            <Link to={`blog/${previous.title.slug}`}>Previous Post</Link>
-          )}
-          <br />
-        </div>
-        <div className={templateStyles.links}>
-          {next && <Link to={`blog/${next.title.slug}`}>Next Post</Link>}
-        </div>
-      </nav> */}
     </Layout>
   )
 }

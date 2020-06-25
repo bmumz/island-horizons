@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { useState } from "react"
 import headerStyles from "./header.module.scss"
+// import Image from "./image"
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
@@ -14,61 +15,64 @@ const Navbar = () => {
     }
   `)
   return (
-    <div>
-      <header className={headerStyles.header}>
-        <h1>
-          <Link className={headerStyles.title} to="/">
-            {data.site.siteMetadata.title}
-          </Link>
-        </h1>
-      </header>
+    <div className="body">
+      <div className={headerStyles.navContainer}>
+        {" "}
+        <div className={headerStyles.navigation}>
+          <header className={headerStyles.header}>
+            {" "}
+            {/* <Image /> */}
+            <Link className={headerStyles.title} to="/">
+              {data.site.siteMetadata.title}
+            </Link>
+            <div className={headerStyles.navbar}>
+              <NavItems
+                navigationLinks={[
+                  {
+                    navItemName: "blog",
+                    navItemLink: "/",
+                  },
+                  {
+                    navItemName: "critter guides",
+                    menuItems: [
+                      {
+                        link: "/bugs",
+                        name: "bugs",
+                      },
+                      {
+                        link: "/fish",
+                        name: "fish",
+                      },
+                      {
+                        link: "/fossils",
+                        name: "fossils",
+                      },
+                    ],
+                  },
+                  {
+                    navItemName: "villagers",
+                    navItemLink: "/villagers",
+                  },
 
-      <nav className={headerStyles.navbar}>
-        <NavItems
-          navigationLinks={[
-            {
-              navItemName: "blog",
-              navItemLink: "/",
-            },
-
-            {
-              navItemName: "villagers",
-              navItemLink: "/villagers",
-            },
-            {
-              navItemName: "critter guides",
-              menuItems: [
-                {
-                  link: "/insects",
-                  name: "insects",
-                },
-                {
-                  link: "/fish",
-                  name: "fish",
-                },
-                {
-                  link: "/fossils",
-                  name: "fossils",
-                },
-              ],
-            },
-            // {
-            //   navItemName: "custom designs",
-            //   menuItems: [
-            //     {
-            //       link: "/clothing",
-            //       name: "clothes designs",
-            //     },
-            //     {
-            //       link: "/paths",
-            //       name: "path designs",
-            //     },
-            //   ],
-            // },
-          ]}
-        />
-      </nav>
-      <hr />
+                  // {
+                  //   navItemName: "custom designs",
+                  //   menuItems: [
+                  //     {
+                  //       link: "/clothing",
+                  //       name: "clothes designs",
+                  //     },
+                  //     {
+                  //       link: "/paths",
+                  //       name: "path designs",
+                  //     },
+                  //   ],
+                  // },
+                ]}
+              />
+            </div>
+          </header>
+        </div>
+      </div>
     </div>
   )
 }

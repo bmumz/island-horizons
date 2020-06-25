@@ -25,6 +25,20 @@ class Fish extends Component {
       <div className={critterStyles.parentContainer}>
         <Layout>
           <Head title="Fish Guide" />
+          <p className={critterStyles.title}>Fish Catching Guide</p>
+          {/* <p className={critterStyles.description}>
+            {" "}
+        
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Adipiscing enim eu turpis egestas. Diam volutpat commodo sed
+              egestas egestas fringilla phasellus. Et netus et malesuada fames
+              ac turpis egestas integer eget. Facilisis leo vel fringilla est
+              ullamcorper eget nulla. Blandit libero volutpat sed cras ornare
+              arcu dui vivamus. Tempor orci eu lobortis elementum nibh tellus
+              molestie nunc.
+           
+          </p> */}
           <Critters critters={items} seller="price-cj" sellerName="CJ" />
         </Layout>
       </div>

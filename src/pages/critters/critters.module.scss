@@ -5,12 +5,24 @@
     url(../../fonts/FinkHeavy.woff2) format("woff2");
 }
 
+.title {
+  font-family: FinkHeavy;
+  font-size: 35px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 0.9rem;
+}
+
 //SECONDARY NAVIGATION
 .critter-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 20px;
+  max-width: 750px;
 }
 
 //TOGGLE FOR HEMISPHERES
@@ -127,9 +139,6 @@ p {
 
 .sort-price {
   // margin-top: 20px;
-  -webkit-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
   margin-right: 5px;
   padding: 10px;
   margin-top: 15px;
@@ -139,12 +148,6 @@ p {
   font-size: 12px;
   text-align: center;
   line-height: 15px;
-}
-.sort-check:active {
-  -webkit-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  box-shadow: 0 0 5px rgba(34, 157, 108, 0.3);
-  background-color: #229d6c;
 }
 
 //CRITTER COMPONENT
@@ -190,7 +193,7 @@ p {
 }
 
 .name-highlight {
-  box-shadow: inset 0 -10px beige;
+  box-shadow: inset 0 -10px #ffe5a2;
 }
 
 .critter-image {

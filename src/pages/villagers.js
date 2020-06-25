@@ -32,6 +32,16 @@ export default class Villagers extends Component {
     let items = this.state.items || []
     let search = this.state.search
 
+    items.sort(function (a, b) {
+      if (a.name["name-USen"] < b.name["name-USen"]) {
+        return -1
+      }
+      if (a.name["name-USen"] > b.name["name-USen"]) {
+        return 1
+      }
+      return 0
+    })
+
     if (search.length > 0) {
       items = items.filter(item => {
         let name = this.getName(item)
@@ -56,6 +66,15 @@ export default class Villagers extends Component {
       <div className="layoutContainer">
         <Layout>
           <Head title="Villagers List" />
+          <p className={villagerStyles.title}>List of Villagers</p>
+          {/* <div className={villagerStyles.villagerDescription}>
+            Here is the complete list of villagers available to live on your
+            island in Animal Crossing New Horizons! There are 6 personality
+            types: Uchi <br />
+            Snooty <br />
+            Normal <br />
+          </div> */}
+
           <div className={villagerStyles.searchContainer}>
             <input
               type="text"

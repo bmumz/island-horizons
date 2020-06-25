@@ -30,11 +30,11 @@ const Home = () => {
           return (
             <div key={edge.node.slug} className={blogStyles.post}>
               <Link to={`/blog/${edge.node.slug}`}>
-                <h2 className={blogStyles.blogPostTitle}>
+                <p className={blogStyles.blogPostTitle}>
                   <span className={blogStyles.highlightTitle}>
                     {edge.node.title}
                   </span>
-                </h2>
+                </p>
                 <div className={blogStyles.date}>{edge.node.publishedDate}</div>
 
                 <div className={blogStyles.excerpt}>{edge.node.excerpt}</div>

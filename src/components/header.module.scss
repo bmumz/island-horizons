@@ -10,36 +10,44 @@
   text-decoration: none;
   position: relative;
   text-align: center;
+  margin-top: 1rem;
 }
 
-.header-img {
+.nav-container {
+  box-shadow: 0px 0px 2px 2px #2a856d;
+  background-image: url("https://i.ibb.co/ssJD77C/woodbg03.png");
+
+  width: 100vw;
+  padding: 15px;
 }
+
+// .navigation {
+//   position: absolute;
+// }
 
 .title {
-  color: #a6dbac;
+  color: #fed059;
   font-family: "FinkHeavy";
+  -webkit-text-stroke: 2.5px #8d4e21;
+  -webkit-text-fill-color: #fed059;
+  text-shadow: 2px 2px 1px #704b3e;
   font-size: 4rem;
   text-decoration: none;
-  -webkit-text-stroke: 1px #229d6c;
-  -webkit-text-fill-color: #a6dbac;
-
-  // width: 100%;
-}
-
-.header-image {
-  position: relative;
-  height: 200px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .title:hover {
   text-decoration: none;
-  color: #a6dbac;
 }
 
 .navbar {
   display: flex;
-  padding: 10px 20px;
-  margin-bottom: 1rem;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 2px;
+  // margin-left: 200px;
 }
 
 .nav-list {
@@ -47,15 +55,17 @@
 }
 
 .nav-item {
-  color: #a6dbac;
+  color: #fed059;
   font-family: "FinkHeavy";
   font-size: 1.1rem;
+  text-shadow: 2px 2px 1px #8d4e21;
   text-decoration: none;
   padding: 0 8px;
 }
 
 .nav-button {
-  color: #a6dbac;
+  color: #fed059;
+  text-shadow: 2px 2px 1px #8d4e21;
   font-family: inherit;
   border: 0;
   text-decoration: none;
@@ -66,32 +76,34 @@
 }
 
 .nav-item:hover {
-  color: #229d6c;
+  color: #ffbe15;
 }
 
 .active-nav-item {
-  color: #229d6c;
+  color: #ffbe15;
 }
 
 .menu-list {
   display: flex;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(177, 125, 65, 0.88);
+  // background-image: url("https://i.ibb.co/fnvDgB7/woodbg04.png");
   flex-direction: column;
   position: absolute;
   width: 100%;
+  cursor: pointer;
 }
 
 .menu-item {
   font-family: "FinkHeavy";
-  text-align: start;
+  text-align: flex-start;
   text-decoration: none;
-  color: #a6dbac;
+  color: #fed059;
   padding: 0 10px;
   width: 100%;
 }
 
 .menu-item:hover {
-  color: #229d6c;
+  color: #ffbe15;
   display: block;
 }
 
@@ -99,8 +111,40 @@
   /* For mobile phones: */
   .title {
     font-size: 3rem;
-    -webkit-text-stroke: 2px #229d6c;
-    -webkit-text-fill-color: #a6dbac;
+    -webkit-text-stroke: 2.5px #8d4e21;
+    -webkit-text-fill-color: #fed059;
     text-decoration: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-container {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .title {
+    -webkit-text-stroke: 1.5px #8d4e21;
+    -webkit-text-fill-color: #fed059;
+    text-shadow: 2px 2px 1px #704b3e;
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .title {
+    -webkit-text-stroke: 1.5px #8d4e21;
+    -webkit-text-fill-color: #fed059;
+    text-shadow: 2px 2px 1px #704b3e;
+    font-size: 2.7rem;
+  }
+  .nav-container {
+    margin-bottom: 15px;
+  }
+  .nav-button {
+    margin-bottom: 10px;
+  }
+  .nav-list {
+    margin: 5px;
   }
 }
