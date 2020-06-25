@@ -63,28 +63,31 @@ export default class Villagers extends Component {
     }
 
     return (
-      <div className="layoutContainer">
+      <div className="container">
         <Layout>
           <Head title="Villagers List" />
-          <p className={villagerStyles.title}>List of Villagers</p>
-          {/* <div className={villagerStyles.villagerDescription}>
+          <div className={villagerStyles.layoutContainer}>
+            {" "}
+            <p className={villagerStyles.title}>List of Villagers</p>
+            {/* <div className={villagerStyles.villagerDescription}>
             Here is the complete list of villagers available to live on your
             island in Animal Crossing New Horizons! There are 6 personality
             types: Uchi <br />
             Snooty <br />
             Normal <br />
           </div> */}
-
-          <div className={villagerStyles.searchContainer}>
-            <input
-              type="text"
-              value={this.state.search}
-              onChange={this.onSearch}
-              className={villagerStyles.searchBar}
-              placeholder="Search by Name, Species or Personality"
-              maxLength="25"
-            />
+            <div className={villagerStyles.searchContainer}>
+              <input
+                type="text"
+                value={this.state.search}
+                onChange={this.onSearch}
+                className={villagerStyles.searchBar}
+                placeholder="Search by Name, Species or Personality"
+                maxLength="25"
+              />
+            </div>
           </div>
+
           {items &&
             items.map((item, index) => (
               <div key={index} className={villagerStyles.villagerContainer}>
@@ -110,6 +113,7 @@ export default class Villagers extends Component {
                     {this.getPersonality(item)}
                     <br />
                     <b>Species:</b> {this.getSpecies(item)}
+                    <br />
                     <br />
                     <hr />
                     <p className={villagerStyles.capitalize}>

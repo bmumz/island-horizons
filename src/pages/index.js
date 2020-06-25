@@ -23,26 +23,30 @@ const Home = () => {
   return (
     <Layout>
       <Head title="Home" keywords="" description="" />
-      <div className={blogStyles.cards}>
-        {" "}
-        <p className={blogStyles.title}>Recent Posts</p>
-        {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            <div key={edge.node.slug} className={blogStyles.post}>
-              <Link to={`/blog/${edge.node.slug}`}>
-                <p className={blogStyles.blogPostTitle}>
-                  <span className={blogStyles.highlightTitle}>
-                    {edge.node.title}
-                  </span>
-                </p>
-                <div className={blogStyles.date}>{edge.node.publishedDate}</div>
+      <div className={blogStyles.blogPostList}>
+        <div className={blogStyles.cards}>
+          {" "}
+          <p className={blogStyles.title}>Recent Posts</p>
+          {data.allContentfulBlogPost.edges.map(edge => {
+            return (
+              <div key={edge.node.slug} className={blogStyles.post}>
+                <Link to={`/blog/${edge.node.slug}`}>
+                  <p className={blogStyles.blogPostTitle}>
+                    <span className={blogStyles.highlightTitle}>
+                      {edge.node.title}
+                    </span>
+                  </p>
+                  <div className={blogStyles.date}>
+                    {edge.node.publishedDate}
+                  </div>
 
-                <div className={blogStyles.excerpt}>{edge.node.excerpt}</div>
-              </Link>
-              <hr />
-            </div>
-          )
-        })}
+                  <div className={blogStyles.excerpt}>{edge.node.excerpt}</div>
+                </Link>
+                <hr />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )

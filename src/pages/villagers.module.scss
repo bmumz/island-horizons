@@ -5,22 +5,35 @@
     url(../fonts/FinkHeavy.woff2) format("woff2");
 }
 
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title {
   font-family: FinkHeavy;
   font-size: 35px;
   text-align: left;
   margin-bottom: 5px;
 }
+
 .villager-description {
   font-size: 0.9rem;
 }
 
 .villager-container {
-  align-self: center;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .search-container {
-  align-self: center;
+  max-width: 750px;
+  width: 50%;
 }
 
 .search-bar {
@@ -28,13 +41,12 @@
   border: 1px solid #ccc;
   border-radius: 20px;
   margin-right: 10px;
-  background-color: transparent;
   cursor: auto;
+  width: 95%;
   outline: none;
   margin: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 550px;
   background-color: white;
 }
 
@@ -48,7 +60,7 @@
   border-radius: 5px;
   height: 100%;
   overflow: hidden;
-  width: 550px;
+  width: 80%;
   font-size: 12px;
   background-color: rgba(255, 255, 255, 0.9);
 }

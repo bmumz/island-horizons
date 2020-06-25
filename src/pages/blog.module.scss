@@ -5,16 +5,23 @@
     url(../fonts/FinkHeavy.woff2) format("woff2");
 }
 
+.blogPostList {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .cards {
-  height: 100%;
-  overflow: hidden;
+  width: 80%;
 }
 
 .title {
   color: #888888;
   font-family: "FinkHeavy";
-  margin-bottom: 30px;
-  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
 .post {
@@ -56,6 +63,6 @@
 
 @media only screen and (max-width: 400px) {
   .highlightTitle {
-    box-shadow: inset 0 -20px #a6dbac;
+    box-shadow: inset 0 -20px #fed059;
   }
 }

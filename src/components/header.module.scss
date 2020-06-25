@@ -16,8 +16,8 @@
 .nav-container {
   box-shadow: 0px 0px 2px 2px #2a856d;
   background-image: url("https://i.ibb.co/ssJD77C/woodbg03.png");
-
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding: 15px;
 }
 
@@ -131,20 +131,19 @@
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 375px) {
   .title {
     -webkit-text-stroke: 1.5px #8d4e21;
     -webkit-text-fill-color: #fed059;
     text-shadow: 2px 2px 1px #704b3e;
-    font-size: 2.7rem;
+    font-size: 2.2rem;
   }
   .nav-container {
-    margin-bottom: 15px;
+    padding-top: 2px;
+    padding-bottom: 15px;
   }
-  .nav-button {
-    margin-bottom: 10px;
-  }
-  .nav-list {
-    margin: 5px;
+
+  .navbar {
+    padding-top: 15px;
   }
 }
