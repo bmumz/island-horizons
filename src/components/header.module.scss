@@ -14,7 +14,7 @@
 }
 
 .nav-container {
-  box-shadow: 0px 0px 2px 2px #2a856d;
+  box-shadow: 0px 0px 2px 2px #704b3e;
   background-image: url("https://i.ibb.co/ssJD77C/woodbg03.png");
   height: 100%;
   width: 100%;
@@ -120,7 +120,7 @@
 }
 @media only screen and (max-width: 768px) {
   .nav-container {
-    height: 110px;
+    height: 120px;
   }
 }
 
@@ -129,7 +129,6 @@
     -webkit-text-stroke: 1.5px #8d4e21;
     -webkit-text-fill-color: #fed059;
     text-shadow: 2px 2px 1px #704b3e;
-    font-size: 2.7rem;
   }
 }
 
@@ -138,14 +137,19 @@
     -webkit-text-stroke: 1.5px #8d4e21;
     -webkit-text-fill-color: #fed059;
     text-shadow: 2px 2px 1px #704b3e;
-    font-size: 2.2rem;
   }
+
   .nav-container {
-    padding-top: 2px;
-    padding-bottom: 15px;
+    padding: 5px;
   }
 
   .navbar {
-    padding-top: 15px;
+    padding-top: 10px;
+  }
+
+  .nav-button {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
   }
 }

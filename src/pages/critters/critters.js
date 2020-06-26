@@ -65,6 +65,7 @@ class Critters extends Component {
               placeholder="Search"
               maxLength="25"
             />
+
             <div className={critterStyles.sortFont}>
               <input
                 type="checkbox"

@@ -17,8 +17,12 @@ const Footer = () => {
   return (
     <footer className={footerStyles.footerContents}>
       <p>
-        {data.site.siteMetadata.title} is a fan-made website with no affiliation
-        with Animal Crossing or Nintendo. © 2020 {data.site.siteMetadata.author}
+        <span className={footerStyles.highlight}>
+          {" "}
+          {data.site.siteMetadata.title} is a fan-made website with no
+          affiliation with Animal Crossing or Nintendo. © 2020{" "}
+          {data.site.siteMetadata.author}
+        </span>
       </p>
     </footer>
   )

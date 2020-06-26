@@ -9,6 +9,37 @@
   font-family: FinkHeavy;
 }
 
+.nav-container {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.search-container {
+  width: 55%;
+}
+
+.search-bar {
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: auto;
+  width: 100%;
+  outline: none;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+
+.sortBox {
+  width: 50%;
+  font-size: 12px;
+}
+
 .fossil-name {
   font-family: "FinkHeavy";
   font-size: 20px;
@@ -27,14 +58,13 @@
   justify-content: center;
 }
 
-.fossil-container {
-  position: relative;
+.fossil-img {
+  width: 60%;
+  height: 60%;
 }
-
 .fossil-card {
   display: flex;
   flex-direction: column;
-
   margin: 15px;
   padding: 10px;
   border: 1px solid #999999;
