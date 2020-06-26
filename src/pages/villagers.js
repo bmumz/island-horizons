@@ -86,43 +86,42 @@ export default class Villagers extends Component {
                 maxLength="25"
               />
             </div>
-          </div>
-
-          {items &&
-            items.map((item, index) => (
-              <div key={index} className={villagerStyles.villagerContainer}>
-                <div className={villagerStyles.villagerCard}>
-                  <div className={villagerStyles.villagerProfile}>
-                    <div className={villagerStyles.villagerName}>
-                      <span className={villagerStyles.nameHighlight}>
-                        {item.name["name-USen"]}
-                      </span>
+            {items &&
+              items.map((item, index) => (
+                <div key={index} className={villagerStyles.villagerContainer}>
+                  <div className={villagerStyles.villagerCard}>
+                    <div className={villagerStyles.villagerProfile}>
+                      <div className={villagerStyles.villagerName}>
+                        <span className={villagerStyles.nameHighlight}>
+                          {item.name["name-USen"]}
+                        </span>
+                      </div>
+                      <img
+                        src={item.image_uri}
+                        alt={this.getName(item)}
+                        className={villagerStyles.villagerImg}
+                      />
+                      <div className={villagerStyles.villagerBirthday}>
+                        <FontAwesomeIcon icon={faBirthdayCake} />{" "}
+                        {item["birthday-string"]}
+                      </div>
                     </div>
-                    <img
-                      src={item.image_uri}
-                      alt={this.getName(item)}
-                      className={villagerStyles.villagerImg}
-                    />
-                    <div className={villagerStyles.villagerBirthday}>
-                      <FontAwesomeIcon icon={faBirthdayCake} />{" "}
-                      {item["birthday-string"]}
+                    <div className={villagerStyles.villagerInfo}>
+                      <b>Personality:</b>
+                      {this.getPersonality(item)}
+                      <br />
+                      <b>Species:</b> {this.getSpecies(item)}
+                      <br />
+                      <br />
+                      <hr />
+                      <p className={villagerStyles.capitalize}>
+                        <b>catch-phrase: </b>"{item["catch-phrase"]}"
+                      </p>
                     </div>
-                  </div>
-                  <div className={villagerStyles.villagerInfo}>
-                    <b>Personality:</b>
-                    {this.getPersonality(item)}
-                    <br />
-                    <b>Species:</b> {this.getSpecies(item)}
-                    <br />
-                    <br />
-                    <hr />
-                    <p className={villagerStyles.capitalize}>
-                      <b>catch-phrase: </b>"{item["catch-phrase"]}"
-                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </Layout>
       </div>
     )

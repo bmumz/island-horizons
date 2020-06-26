@@ -85,6 +85,8 @@
 
 .menu-list {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   background: rgba(177, 125, 65, 0.88);
   // background-image: url("https://i.ibb.co/fnvDgB7/woodbg04.png");
   flex-direction: column;

@@ -71,8 +71,7 @@ class Critters extends Component {
                 onClick={this.onSort}
                 className={critterStyles.sortPrice}
               />
-              Sort by Price <br />
-              (Highest to Lowest)
+              Sort by Price (Highest to Lowest)
             </div>
           </div>
           <div className={critterStyles.hemisphereToggle}>

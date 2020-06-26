@@ -6,6 +6,7 @@
 }
 
 .layout-container {
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +25,7 @@
 
 .villager-container {
   max-width: 750px;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +35,10 @@
 
 .search-container {
   max-width: 750px;
-  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 55%;
 }
 
 .search-bar {
@@ -42,7 +47,7 @@
   border-radius: 20px;
   margin-right: 10px;
   cursor: auto;
-  width: 95%;
+  width: 100%;
   outline: none;
   margin: 15px;
   padding-left: 10px;
@@ -54,13 +59,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 15px;
+  flex-wrap: wrap;
+  margin: 10px;
   padding: 10px;
   border: 1px solid #999999;
   border-radius: 5px;
   height: 100%;
-  overflow: hidden;
-  width: 80%;
+  width: 100%;
   font-size: 12px;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -69,6 +74,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 .villager-name {
@@ -86,6 +92,10 @@
   margin-bottom: 0;
 }
 
+.villager-info {
+  margin: 15px;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -99,5 +109,11 @@
       box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
       transform: scale(1.05);
     }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .search-bar {
+    font-size: 11px;
   }
 }

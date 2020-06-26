@@ -37,18 +37,19 @@ const BlogTemplate = props => {
         keywords={props.data.contentfulBlogPost.tags}
         description={props.data.contentfulBlogPost.excerpt}
       ></Head>
-
-      <p className={templateStyles.blogTitle}>
-        {props.data.contentfulBlogPost.title}
-      </p>
-      <i className={templateStyles.publishedDate}>
-        {props.data.contentfulBlogPost.publishedDate}
-      </i>
-      <div className={templateStyles.blogPost}>
-        {documentToReactComponents(
-          props.data.contentfulBlogPost.body.json,
-          options
-        )}
+      <div className={templateStyles.layoutContainer}>
+        <p className={templateStyles.blogTitle}>
+          {props.data.contentfulBlogPost.title}
+        </p>
+        <i className={templateStyles.publishedDate}>
+          {props.data.contentfulBlogPost.publishedDate}
+        </i>
+        <div className={templateStyles.blogPost}>
+          {documentToReactComponents(
+            props.data.contentfulBlogPost.body.json,
+            options
+          )}
+        </div>
       </div>
     </Layout>
   )

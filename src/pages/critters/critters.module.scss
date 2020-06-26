@@ -23,18 +23,21 @@
   justify-content: center;
   margin-top: 20px;
   max-width: 750px;
+  width: 100%;
 }
 
 //TOGGLE FOR HEMISPHERES
 .hemisphere-toggle {
   display: flex;
   flex-direction: row;
-  margin-top: 10px;
-  margin-left: 20px;
+  justify-content: center;
+
+  max-width: 100px;
+  width: 100%;
 }
 
 .hemisphere-option {
-  font-size: 0.8rem;
+  font-size: 12px;
   margin-left: 5px;
   margin-top: -5px;
 }
@@ -120,6 +123,11 @@ p {
 .search-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 350px;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .search-bar {
@@ -127,33 +135,38 @@ p {
   border: 1px solid #ccc;
   border-radius: 20px;
   margin-right: 10px;
-  // width: 180px;
-  background-color: transparent;
+  width: 100%;
+  height: 50%;
+  max-width: 350px;
   cursor: auto;
   outline: none;
-  margin: 15px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 .sort-price {
-  // margin-top: 20px;
   margin-right: 5px;
   padding: 10px;
-  margin-top: 15px;
 }
 
 .sort-font {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   line-height: 15px;
+  margin-left: 5px;
+  width: 100%;
 }
 
 //CRITTER COMPONENT
 .critter-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: center;
   max-width: 750px;
@@ -212,45 +225,42 @@ p {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 375px) {
-  .search-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-
-  .sort-font {
-    text-align: left;
-    margin-left: 10px;
-    margin-bottom: 0px;
-  }
-
-  .search-bar {
-    height: 35px;
-    margin: 0;
-  }
-  .critter-card {
-    width: 300px;
-  }
-
-  .critter-image {
-    margin: 5px;
-  }
-
-  .critter-profile {
-    width: 100px;
-  }
-
-  .critter-name {
-    padding: 1px;
-  }
-}
-
 .month,
 .time {
   padding: 0 5px;
 }
+
+// @media only screen and (max-width: 375px) {
+//   .search-container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
+
+// .sort-font {
+// }
+
+//   .search-bar {
+//     height: 35px;
+//     margin: 0;
+//   }
+//   .critter-card {
+//     width: 300px;
+//   }
+
+//   .critter-image {
+//     margin: 5px;
+//   }
+
+//   .critter-profile {
+//     width: 100px;
+//   }
+
+//   .critter-name {
+//     padding: 1px;
+//   }
+// }
 
 @media only screen and (min-width: 770px) {
   .critter-card {
@@ -261,5 +271,11 @@ p {
       box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
       transform: scale(1.05);
     }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .sort-font {
+    width: 100%;
   }
 }
