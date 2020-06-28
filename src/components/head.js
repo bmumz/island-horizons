@@ -40,7 +40,7 @@ const Head = ({ title, keywords, description }) => {
         name="url"
         content={data.site.siteMetadata.siteUrl}
       />
-      <meta property="og:image" content="https://i.ibb.co/Y0yM65D/og-img.jpg" />
+      <meta property="og:image" content="https://i.ibb.co/C017MWN/og-img.jpg" />
 
       <link rel="canonical" href="https://www.islandhorizons.com"></link>
     </Helmet>
