@@ -85,6 +85,25 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.islandhorizons.com",
+        sitemap: "https://www.islandhorizons.com/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: [
+              "/critters/critters/",
+              "/critters/time",
+              "/critters/month",
+              "/",
+            ],
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",

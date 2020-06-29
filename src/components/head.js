@@ -20,6 +20,7 @@ const Head = ({ title, keywords, description }) => {
     <Helmet>
       <html lang="en" />
       <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
+
       <meta
         property="og:title"
         content="Island Horizons: An Animal Crossing Fan Blog"
