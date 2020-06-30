@@ -180,7 +180,7 @@ p {
   padding: 10px;
   border: 1px solid #999999;
   border-radius: 5px;
-  height: 100%;
+  width: 70%;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -188,7 +188,8 @@ p {
 .critter-profile {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
   align-items: center;
 }
 

@@ -33,7 +33,7 @@ const Navbar = () => {
                     navItemLink: "/",
                   },
                   {
-                    navItemName: "critter guides",
+                    navItemName: "critterpedia guide",
                     menuItems: [
                       {
                         link: "/bugs",
@@ -43,15 +43,15 @@ const Navbar = () => {
                         link: "/fish",
                         name: "fish",
                       },
-                      {
-                        link: "/fossils",
-                        name: "fossils",
-                      },
                     ],
                   },
                   {
                     navItemName: "villagers",
                     navItemLink: "/villagers",
+                  },
+                  {
+                    navItemName: "fossil guide",
+                    navItemLink: "/fossils",
                   },
 
                   // {

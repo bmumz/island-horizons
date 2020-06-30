@@ -79,10 +79,14 @@ export default class Fossils extends Component {
                 <div key={index} className={fossilStyles.fossilCard}>
                   <div className={critterStyles.critterProfile}>
                     <div className={critterStyles.critterName}>
-                      <span className={critterStyles.nameHighlight}>
-                        {item.name["name-USen"]}
-                      </span>
+                      <p>
+                        <span className={fossilStyles.nameHighlight}>
+                          {" "}
+                          {item.name["name-USen"]}
+                        </span>
+                      </p>
                     </div>
+
                     <img
                       src={item.image_uri}
                       alt={item.name["name-USen"]}

@@ -83,7 +83,17 @@ module.exports = {
   },
 
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [
+          "/critters/time/",
+          "/critters/month/",
+          "/critters/critters/",
+          "/404",
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -97,7 +107,6 @@ module.exports = {
               "/critters/critters/",
               "/critters/time",
               "/critters/month",
-              "/",
             ],
           },
         ],
