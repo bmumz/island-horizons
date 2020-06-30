@@ -275,8 +275,12 @@ p {
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 375px) {
   .sort-font {
     width: 100%;
+  }
+  .critter-card {
+    flex-direction: column;
+    justify-content: center;
   }
 }
