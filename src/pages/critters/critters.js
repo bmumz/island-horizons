@@ -107,17 +107,17 @@ class Critters extends Component {
                   />
                 </div>
                 <div className={critterStyles.critterInfo}>
-                  <b>Nook's Cranny: </b>
-                  {item.price} Bells
-                  <br />
-                  <b> {sellerName}: </b>
-                  {item[seller]} Bells
-                  <br />
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
-                  {item.availability["location"]}
-                </div>
-                <div className={critterStyles.critterInfo}>
-                  <div>
+                  <div className={critterStyles.prices}>
+                    <b>Nook's Cranny: </b>
+                    {item.price} Bells
+                    <br />
+                    <b> {sellerName}: </b>
+                    {item[seller]} Bells
+                    <br />
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
+                    {item.availability["location"]}
+                  </div>
+                  <div className={critterStyles.hemisphereDetails}>
                     <div className={critterStyles.availabilityCenter}>
                       {hemisphere}
                     </div>

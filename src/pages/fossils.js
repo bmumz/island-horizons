@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import critterStyles from "./critters/critters.module.scss"
+// import critterStyles from "./critters/critters.module.scss"
 import fossilStyles from "./fossils.module.scss"
 
 export default class Fossils extends Component {
@@ -49,10 +49,13 @@ export default class Fossils extends Component {
     }
 
     return (
-      <div className={critterStyles.body}>
+      <div className={fossilStyles.body}>
         <Layout>
           <Head title="Fossils Guide" />
-          <p className={critterStyles.title}>Fossils Guide</p>
+          <div className={fossilStyles.layoutContainer}>
+            <p className={fossilStyles.title}>Fossils Guide</p>
+          </div>
+
           <div className={fossilStyles.navContainer}>
             <div className={fossilStyles.searchContainer}>
               <input
@@ -77,8 +80,8 @@ export default class Fossils extends Component {
             {items &&
               items.map((item, index) => (
                 <div key={index} className={fossilStyles.fossilCard}>
-                  <div className={critterStyles.critterProfile}>
-                    <div className={critterStyles.critterName}>
+                  <div className={fossilStyles.fossilProfile}>
+                    <div className={fossilStyles.fossilName}>
                       <p>
                         <span className={fossilStyles.nameHighlight}>
                           {" "}
@@ -86,14 +89,11 @@ export default class Fossils extends Component {
                         </span>
                       </p>
                     </div>
-
-                    <img
-                      src={item.image_uri}
-                      alt={item.name["name-USen"]}
-                      className={fossilStyles.fossilImg}
-                    />
+                    <div className={fossilStyles.fossilImg}>
+                      <img src={item.image_uri} alt={item.name["name-USen"]} />
+                    </div>
                   </div>
-                  <div className="price">
+                  <div className={fossilStyles.price}>
                     <b>Sells for: </b>
                     {item.price} Bells
                   </div>

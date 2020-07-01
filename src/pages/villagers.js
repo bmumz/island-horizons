@@ -65,17 +65,42 @@ export default class Villagers extends Component {
     return (
       <div className="container">
         <Layout>
-          <Head title="Villagers List" />
+          <Head title="New Horizons Complete Villagers List" />
           <div className={villagerStyles.layoutContainer}>
             {" "}
             <p className={villagerStyles.title}>List of Villagers</p>
-            {/* <div className={villagerStyles.villagerDescription}>
-            Here is the complete list of villagers available to live on your
-            island in Animal Crossing New Horizons! There are 6 personality
-            types: Uchi <br />
-            Snooty <br />
-            Normal <br />
-          </div> */}
+            <div className={villagerStyles.villagerDescription}>
+              <p>
+                Animal Crossing: New Horizons features many returning— and 8
+                brand new villagers of <b>8 Personality Types:</b>
+                <div className={villagerStyles.personalityTypes}>
+                  <div className={villagerStyles.maleVillagers}>
+                    <br />
+                    <u>Male Villagers:</u>
+                    <br />
+                    <ul>
+                      <li>Lazy</li>
+                      <li>Smug</li>
+                      <li>Jock</li>
+                      <li>Cranky</li>
+                    </ul>
+                  </div>
+                  <br />
+                  <div className={villagerStyles.femaleVillagers}>
+                    <br />
+                    <u>Female Villagers:</u>
+                    <br />
+                    <ul>
+                      <li>Normal</li>
+                      <li>Snooty</li>
+                      <li>Peppy</li>
+                      <li>Uchi (Sisterly)</li>
+                    </ul>
+                  </div>
+                </div>
+                <br />
+              </p>
+            </div>
             <div className={villagerStyles.searchContainer}>
               <input
                 type="text"
