@@ -194,6 +194,9 @@ p {
   font-size: 20px;
   text-transform: capitalize;
   font-family: FinkHeavy;
+  p {
+    margin: 0 0 0;
+  }
 }
 
 .name-highlight {
