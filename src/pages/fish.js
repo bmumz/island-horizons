@@ -24,7 +24,16 @@ class Fish extends Component {
     return (
       <div className={critterStyles.parentContainer}>
         <Layout>
-          <Head title="Fish Guide" />
+          <Head
+            title="Fish Catching Guide"
+            description="A complete guide to catching all available fish in New Horizons!"
+            keywords="Animal Crossing Fish Guide, Animal Crossing Fish Prices,
+            fish prices new horizons, fish prices animal crossing, ACNH Fish prices,
+            fish catching guide, northern hemisphere fish prices, southern hemisphere fish prices,
+            Complete List of fish Animal Crossing, how to fish in Animal Crossing,
+            
+            "
+          />
           <p className={critterStyles.title}>Fish Catching Guide</p>
           {/* <p className={critterStyles.description}>
             {" "}

@@ -29,7 +29,7 @@ const Head = ({ title, keywords, description }) => {
       <meta
         property="og:description"
         name="description"
-        content={`${description} ${data.site.siteMetadata.description}`}
+        content={`${description} | ${data.site.siteMetadata.title} | ${data.site.siteMetadata.description}`}
       />
       <meta
         name="keywords"

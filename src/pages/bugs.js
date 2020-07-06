@@ -24,7 +24,14 @@ class Bugs extends Component {
     return (
       <div className={critterStyles.parentContainer}>
         <Layout>
-          <Head title="Bugs Guide" />
+          <Head
+            title="Bug Catching Guide"
+            description="A complete guide to catching all available bugs in New Horizons!"
+            keywords="Animal Crossing Bug Guide, Animal Crossing Bug Prices,
+            bug prices new horizons, bug prices animal crossing, ACNH bug prices,
+            bug catching guide, northern hemisphere bug prices, southern hemisphere bug prices,
+            Complete List of bugs Animal Crossing, how to catch bugs in Animal Crossing,"
+          />
           <p className={critterStyles.title}>Bug Catching Guide</p>
           {/* <p className={critterStyles.description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
