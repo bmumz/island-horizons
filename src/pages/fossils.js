@@ -32,8 +32,6 @@ export default class Fossils extends Component {
   render() {
     let items = this.state.items || []
     let search = this.state.search
-    // let { fossils } = this.props
-    // let collection = fossils && [...fossils]
 
     if (search.length > 0) {
       items = items.filter(

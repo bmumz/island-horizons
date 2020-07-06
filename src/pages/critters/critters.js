@@ -7,11 +7,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 class Critters extends Component {
-  state = {
-    on: false,
-    search: "",
-    items: [],
-    isSort: false,
+  constructor() {
+    super()
+    this.state = {
+      on: false,
+      search: "",
+      items: [],
+      isSort: false,
+    }
   }
 
   onToggle = event => {
@@ -40,11 +43,11 @@ class Critters extends Component {
       shadowSize,
       shadow,
     } = this.props
-    let collection = critters && [...critters]
     let search = this.state.search
+    let collection = critters && [...critters]
 
     if (search.length > 0) {
-      collection = collection.filter(
+      critters = critters.filter(
         item =>
           this.getName(item).toLowerCase().indexOf(search.toLowerCase()) !== -1
       )
@@ -71,7 +74,6 @@ class Critters extends Component {
               onChange={this.onSearch}
               className={critterStyles.searchBar}
               placeholder="Search"
-              maxLength="25"
             />
 
             <div className={critterStyles.sortFont}>
