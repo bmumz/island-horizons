@@ -39,7 +39,14 @@ class Fish extends Component {
               molestie nunc.
            
           </p> */}
-          <Critters critters={items} seller="price-cj" sellerName="CJ" />
+          <Critters
+            critters={items}
+            seller="price-cj"
+            price="Bells"
+            sellerName="CJ:"
+            shadow="Shadow:"
+            shadowSize="shadow"
+          />
         </Layout>
       </div>
     )
@@ -47,7 +54,3 @@ class Fish extends Component {
 }
 
 export default Fish
-
-// filter by: Location, shadow size
-// toggle for north/south hemisphere
-// if statement for availability

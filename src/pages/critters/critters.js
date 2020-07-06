@@ -31,7 +31,15 @@ class Critters extends Component {
   getName = item => item.name["name-USen"]
 
   render() {
-    let { critters, seller, sellerName } = this.props
+    let {
+      critters,
+      seller,
+      location,
+      sellerName,
+      price,
+      shadowSize,
+      shadow,
+    } = this.props
     let collection = critters && [...critters]
     let search = this.state.search
 
@@ -111,12 +119,15 @@ class Critters extends Component {
                     <b>Nook's Cranny: </b>
                     {item.price} Bells
                     <br />
-                    <b> {sellerName}: </b>
-                    {item[seller]} Bells
+                    <b> {sellerName} </b>
+                    {item[seller]} {price}
                     <br />
-                    <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {location}
                     {item.availability["location"]}
+                    <br />
+                    <b>{shadow}</b> {item[shadowSize]}
                   </div>
+
                   <div className={critterStyles.hemisphereDetails}>
                     <div className={critterStyles.availabilityCenter}>
                       {hemisphere}

@@ -36,7 +36,12 @@ class Bugs extends Component {
             vivamus. Tempor orci eu lobortis elementum nibh tellus molestie
             nunc.
           </p> */}
-          <Critters critters={items} seller="price-flick" sellerName="Flick" />
+          <Critters
+            critters={items}
+            seller="price-flick"
+            price="Bells"
+            sellerName="Flick:"
+          />
         </Layout>
       </div>
     )

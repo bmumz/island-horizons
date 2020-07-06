@@ -36,6 +36,10 @@ const Navbar = () => {
                     navItemName: "critterpedia guide",
                     menuItems: [
                       {
+                        link: "/seacreatures",
+                        name: "sea creatures",
+                      },
+                      {
                         link: "/bugs",
                         name: "bugs",
                       },
