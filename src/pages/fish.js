@@ -4,6 +4,7 @@ import critterStyles from "./critters/critters.module.scss"
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import { Link } from "gatsby"
 
 class Fish extends Component {
   constructor() {
@@ -34,20 +35,6 @@ class Fish extends Component {
             
             "
           />
-          <p className={critterStyles.title}>Fish Catching Guide</p>
-          {/* <p className={critterStyles.description}>
-            {" "}
-        
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Adipiscing enim eu turpis egestas. Diam volutpat commodo sed
-              egestas egestas fringilla phasellus. Et netus et malesuada fames
-              ac turpis egestas integer eget. Facilisis leo vel fringilla est
-              ullamcorper eget nulla. Blandit libero volutpat sed cras ornare
-              arcu dui vivamus. Tempor orci eu lobortis elementum nibh tellus
-              molestie nunc.
-           
-          </p> */}
           <Critters
             critters={items}
             seller="price-cj"
@@ -55,6 +42,10 @@ class Fish extends Component {
             sellerName="CJ:"
             shadow="Shadow:"
             shadowSize="shadow"
+            type="fish"
+            amount="80"
+            link1=<Link to="/bugs">Bug Catching Guide</Link>
+            link2=<Link to="/seacreatures">Sea Creature Catching Guide</Link>
           />
         </Layout>
       </div>

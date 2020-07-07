@@ -1,7 +1,7 @@
 import React from "react"
 import { Component } from "react"
 import critterStyles from "./critters/critters.module.scss"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -32,22 +32,16 @@ class Bugs extends Component {
             bug catching guide, northern hemisphere bug prices, southern hemisphere bug prices,
             Complete List of bugs Animal Crossing, how to catch bugs in Animal Crossing,"
           />
-          <p className={critterStyles.title}>Bug Catching Guide</p>
-          {/* <p className={critterStyles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Adipiscing enim eu turpis egestas. Diam volutpat commodo sed egestas
-            egestas fringilla phasellus. Et netus et malesuada fames ac turpis
-            egestas integer eget. Facilisis leo vel fringilla est ullamcorper
-            eget nulla. Blandit libero volutpat sed cras ornare arcu dui
-            vivamus. Tempor orci eu lobortis elementum nibh tellus molestie
-            nunc.
-          </p> */}
+
           <Critters
             critters={items}
             seller="price-flick"
             price="Bells"
             sellerName="Flick:"
+            type="bugs"
+            amount="80"
+            link1=<Link to="/fish">Fish Catching Guide</Link>
+            link2=<Link to="/seacreatures">Sea Creature Catching Guide</Link>
           />
         </Layout>
       </div>

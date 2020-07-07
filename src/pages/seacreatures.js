@@ -4,6 +4,7 @@ import critterStyles from "./critters/critters.module.scss"
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import { Link } from "gatsby"
 
 class SeaCreatures extends Component {
   constructor() {
@@ -37,13 +38,16 @@ class SeaCreatures extends Component {
               Sea Creatures Complete List, How to find and catch sea creatures
           "
           />
-          <p className={critterStyles.title}>Sea Creatures Catching Guide</p>
 
           <Critters
             critters={items}
             location="Deep Sea (Diving)"
             shadow="Shadow:"
             shadowSize="shadow"
+            type="sea creatures"
+            amount="40"
+            link1=<Link to="/fish">Fish Catching Guide</Link>
+            link2=<Link to="/bugs">Bug Catching Guide</Link>
           />
         </Layout>
       </div>

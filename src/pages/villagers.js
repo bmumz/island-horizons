@@ -66,7 +66,7 @@ export default class Villagers extends Component {
       <div className="container">
         <Layout>
           <Head title="New Horizons Complete Villagers List" />
-          <div className={villagerStyles.layoutContainer}>
+          <div className={villagerStyles.descriptionContainer}>
             {" "}
             <p className={villagerStyles.title}>List of Villagers</p>
             <div className={villagerStyles.villagerDescription}>
@@ -76,7 +76,9 @@ export default class Villagers extends Component {
                 <div className={villagerStyles.personalityTypes}>
                   <div className={villagerStyles.maleVillagers}>
                     <br />
-                    <u>Male Villagers:</u>
+                    <u>
+                      <b>Male Villagers:</b>
+                    </u>
                     <br />
                     <ul>
                       <li>Lazy</li>
@@ -88,7 +90,9 @@ export default class Villagers extends Component {
                   <br />
                   <div className={villagerStyles.femaleVillagers}>
                     <br />
-                    <u>Female Villagers:</u>
+                    <u>
+                      <b>Female Villagers:</b>
+                    </u>
                     <br />
                     <ul>
                       <li>Normal</li>
@@ -132,10 +136,10 @@ export default class Villagers extends Component {
                       </div>
                     </div>
                     <div className={villagerStyles.villagerInfo}>
-                      <b>Personality:</b>
+                      <b>Personality: </b>
                       {this.getPersonality(item)}
                       <br />
-                      <b>Species:</b> {this.getSpecies(item)}
+                      <b>Species: </b> {this.getSpecies(item)}
                       <br />
                       <br />
                       <hr />

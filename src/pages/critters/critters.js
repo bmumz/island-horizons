@@ -42,6 +42,10 @@ class Critters extends Component {
       price,
       shadowSize,
       shadow,
+      type,
+      amount,
+      link1,
+      link2,
     } = this.props
     let search = this.state.search
     let collection = critters && [...critters]
@@ -66,6 +70,31 @@ class Critters extends Component {
 
     return (
       <div className={critterStyles.critterBody}>
+        <div className={critterStyles.descriptionContainer}>
+          <p className={critterStyles.title}>{type} Catching Guide</p>
+          <div className={critterStyles.description}>
+            This guide is a complete collection of all{" "}
+            <b>
+              <i>
+                {amount} {type}
+              </i>
+            </b>{" "}
+            in Animal Crossing: New Horizons! It was designed with all the
+            information to help you fill up your museum faster! It includes
+            <i> where</i> to find them, <i>when</i> to find them (time of day
+            and year), as well as <i>what</i> you can sell them for!
+          </div>
+          <div className={critterStyles.description}>
+            <b>
+              Before you get started, remember to select the hemisphere your
+              island is on to get accurate results.
+            </b>
+          </div>
+
+          <div className={critterStyles.description}>
+            Be sure to also check out our {link1} and {link2}!
+          </div>
+        </div>
         <div className={critterStyles.critterNav}>
           <div className={critterStyles.searchContainer}>
             <input
@@ -96,7 +125,6 @@ class Critters extends Component {
             </div>
           </div>
         </div>
-
         <div className={critterStyles.critterContainer}>
           {collection &&
             collection.map((item, index) => (

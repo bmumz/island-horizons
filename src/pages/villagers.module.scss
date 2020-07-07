@@ -5,7 +5,7 @@
     url(../fonts/FinkHeavy.woff2) format("woff2");
 }
 
-.layout-container {
+.description-container {
   max-width: 750px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,15 @@
   }
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.male-villagers {
+  margin-right: 20px;
+}
+
+.female-villagers {
+  margin-left: 20px;
 }
 
 .villager-description {

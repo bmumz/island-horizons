@@ -5,6 +5,18 @@
     url(../fonts/FinkHeavy.woff2) format("woff2");
 }
 
+.description-container {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fossil-description {
+  width: 85%;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
 .title {
   font-family: FinkHeavy;
   font-size: 35px;

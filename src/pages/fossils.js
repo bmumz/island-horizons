@@ -50,8 +50,20 @@ export default class Fossils extends Component {
       <div className={fossilStyles.body}>
         <Layout>
           <Head title="Fossils Guide" />
-          <div className={fossilStyles.layoutContainer}>
+          <div className={fossilStyles.descriptionContainer}>
             <p className={fossilStyles.title}>Fossils Guide</p>
+            <p className={fossilStyles.fossilDescription}>
+              There are a total of{" "}
+              <b>
+                {" "}
+                <i> 73 fossils </i>
+              </b>{" "}
+              to collect in Animal Crossing: New Horizons! It is recommended you
+              donate the fossils to Blathers at your island's museum, but, if
+              you have duplicates, you are able to sell them for some quick
+              Bells!
+            </p>
+            {/* <p className={fossilStyles.fossilDigging}>Step 1:</p> */}
           </div>
 
           <div className={fossilStyles.navContainer}>
