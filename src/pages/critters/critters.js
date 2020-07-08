@@ -42,6 +42,8 @@ class Critters extends Component {
       price,
       shadowSize,
       shadow,
+      speed,
+      speedVelocity,
       type,
       amount,
       link1,
@@ -156,6 +158,8 @@ class Critters extends Component {
                     {item.availability["location"]}
                     <br />
                     <b>{shadow}</b> {item[shadowSize]}
+                    <br />
+                    <b>{speed}</b> {item[speedVelocity]}
                   </div>
 
                   <div className={critterStyles.hemisphereDetails}>

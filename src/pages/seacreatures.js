@@ -44,6 +44,8 @@ class SeaCreatures extends Component {
             location="Deep Sea (Diving)"
             shadow="Shadow:"
             shadowSize="shadow"
+            speed="Speed:"
+            speedVelocity="speed"
             type="sea creatures"
             amount="40"
             link1=<Link to="/fish">Fish Catching Guide</Link>
