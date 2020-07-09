@@ -5,6 +5,14 @@
     url(../fonts/FinkHeavy.woff2) format("woff2");
 }
 
+.title {
+  font-family: FinkHeavy;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .description-container {
   max-width: 750px;
   display: flex;
@@ -15,12 +23,15 @@
 .fossil-description {
   width: 85%;
   font-size: 0.9rem;
-  margin-top: 15px;
 }
-.title {
-  font-family: FinkHeavy;
-  font-size: 35px;
-  text-align: center;
+
+.digging-fossils {
+  margin-left: 0px;
+}
+
+.list-item {
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .nav-container {
@@ -63,7 +74,7 @@
 
 .fossil-name {
   font-family: FinkHeavy;
-  font-size: 20px;
+  font-size: 19px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -76,14 +87,12 @@
 }
 
 .fossil-img {
-  width: 70%;
-  height: 70%;
   margin-bottom: 0;
 }
 .fossil-card {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 5px;
   padding: 10px;
   border: 1px solid #999999;
   border-radius: 5px;

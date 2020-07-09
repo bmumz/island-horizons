@@ -120,7 +120,7 @@ const NavHover = props => {
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
     >
-      <div className={headerStyles.navItem}>{props.page}</div>
+      {props.page}
       {isShown && props.children}
     </button>
   )

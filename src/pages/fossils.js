@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
-// import critterStyles from "./critters/critters.module.scss"
 import fossilStyles from "./fossils.module.scss"
 
 export default class Fossils extends Component {
@@ -49,21 +48,53 @@ export default class Fossils extends Component {
     return (
       <div className={fossilStyles.body}>
         <Layout>
-          <Head title="Fossils Guide" />
+          <Head title="Fossil Guide" />
           <div className={fossilStyles.descriptionContainer}>
-            <p className={fossilStyles.title}>Fossils Guide</p>
-            <p className={fossilStyles.fossilDescription}>
+            <p className={fossilStyles.title}>Fossil Guide</p>
+            <div className={fossilStyles.fossilDescription}>
               There are a total of{" "}
-              <b>
-                {" "}
-                <i> 73 fossils </i>
-              </b>{" "}
+              <i>
+                <b>73 fossils </b>{" "}
+              </i>
               to collect in Animal Crossing: New Horizons! It is recommended you
               donate the fossils to Blathers at your island's museum, but, if
               you have duplicates, you are able to sell them for some quick
               Bells!
-            </p>
-            {/* <p className={fossilStyles.fossilDigging}>Step 1:</p> */}
+              {/* <div className={fossilStyles.diggingFossils}>
+                <h4 className={fossilStyles.listItem}>
+                  Step 1: Finding Fossils
+                </h4>
+                Each day, a total of{" "}
+                <b>
+                  <i>4 fossils</i>
+                </b>{" "}
+                will spawn on your island in the shape of a star. These can
+                spawn anywhere on your island (in grass/dirt/snow, but never on
+                a path).
+                <img
+                  src={"https://i.ibb.co/WnCCsD9/fossil-Outline.jpg"}
+                  alt="Fossil Outline"
+                  className={fossilStyles.fossilImg}
+                />
+                <h4 className={fossilStyles.listItem}>
+                  Step 2: Digging Up Fossils
+                </h4>
+                Once you've found a fossil, get out your trusty shovel! Press 'Y' near the star shape. 
+                <img
+                  src={"https://i.ibb.co/yn30Vts/dug-Fossil.jpg"}
+                  alt="Dig Up Fossils"
+                  className={fossilStyles.fossilImg}
+                />
+                <h4 className={fossilStyles.listItem}>
+                  Step 3: Donating Fossils to Blathers
+                </h4>
+                <img
+                  src={"https://i.ibb.co/zP5LVWk/donate-Fossil.jpg"}
+                  alt="Donate Fossils to Blathers"
+                  className={fossilStyles.fossilImg}
+                />
+              </div> */}
+            </div>
           </div>
 
           <div className={fossilStyles.navContainer}>
