@@ -48,7 +48,11 @@ export default class Fossils extends Component {
     return (
       <div className={fossilStyles.body}>
         <Layout>
-          <Head title="Fossil Guide" />
+          <Head
+            title="Fossil Guide"
+            description="A complete guide to all the fossils in New Horizons!"
+            keywords="fossils animal crossing: new horizons, animal crossing fossils, fossils animal crossing, acnh fossils, fossil guide acnh, acnh fossil guide, finding fossils acnh, finding fossils animal crossing, how many fossils can i get per day acnh, digging up fossils acnh, digging up fossils animal crossing, should i donate my fossils acnh, fossil prices acnh, fossil prices animal crossing, fossil prices animal crossing: new horizons, fossil prices, fossil prices acnh"
+          />
           <div className={fossilStyles.descriptionContainer}>
             <p className={fossilStyles.title}>Fossil Guide</p>
             <div className={fossilStyles.fossilDescription}>
