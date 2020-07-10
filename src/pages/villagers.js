@@ -68,7 +68,16 @@ export default class Villagers extends Component {
           <Head
             title="New Horizons Complete Villagers List"
             description="A complete list of villagers in New Horizons!"
-            keywords="villagers animal crossing, villagers in new horizons, new villagers in animal crossing: new horizons, animal crossing: new horizons new villagers, animal crossing characters, acnh villagers, all animal crossing villagers, animal crossing villager list, animal crossing villager types, animal crossing personality types, cute animal crossing villagers, animal crossing cat villagers, animal crossing dog villagers, uchi, smug, snooty, cranky, lazy,  ankha acnh, raymond acnh, marshal acnh, pietro acnh, "
+            keywords="villagers animal crossing, villagers in new horizons, 
+            new villagers in animal crossing: new horizons, animal crossing: new horizons new villagers, 
+            animal crossing characters, acnh villagers, all animal crossing villagers, 
+            animal crossing villager list, animal crossing villager types, 
+            animal crossing personality types, cute animal crossing villagers, 
+            animal crossing cat villagers, animal crossing dog villagers, 
+            uchi villagers, smug villagers, snooty villagers, cranky villagers, lazy villagers,
+            peppy villagers, jock villagers, normal villagers,  
+            ankha acnh, raymond acnh, marshal acnh, pietro acnh, apollo acnh, wolfgang acnh,
+            bam acnh"
           />
           <div className={villagerStyles.descriptionContainer}>
             {" "}
