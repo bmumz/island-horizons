@@ -41,7 +41,9 @@ class Fish extends Component {
             how much do fish sell for in animal crossing new horizons, how much do fish sell to cj,
             how much do fish sell for acnh, how much do fish sell in animal crossing, how much do fish sell for in new horizons,
          "
-          />
+          >
+            <link rel="canonical" href="https://www.islandhorizons.com"></link>
+          </Head>
           <Critters
             critters={items}
             seller="price-cj"

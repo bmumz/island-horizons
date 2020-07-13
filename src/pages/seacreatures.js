@@ -46,7 +46,9 @@ class SeaCreatures extends Component {
             acnh sea creatures list july, acnh sea creatures northern, acnh sea creatures prices, how much do sea creatures sell for animal crossing,
             how much do sea creatures sell for acnh, how much do sea creatures sell for
           "
-          />
+          >
+            <link rel="canonical" href="https://www.islandhorizons.com"></link>
+          </Head>
 
           <Critters
             critters={items}

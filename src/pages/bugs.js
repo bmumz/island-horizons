@@ -41,7 +41,9 @@ class Bugs extends Component {
             how much do bugs sell for acnh, how much do bugs sell for flick, flick animal crossing, flick animal crossing new horizons,
             flick acnh, flick bug prices
             "
-          />
+          >
+            <link rel="canonical" href="https://www.islandhorizons.com"></link>
+          </Head>
 
           <Critters
             critters={items}

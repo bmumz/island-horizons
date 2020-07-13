@@ -73,7 +73,7 @@ module.exports = {
             userAgent: "*",
             allow: "/",
             disallow: [
-              "/critters/critters/",
+              "/critters/critters",
               "/critters/time",
               "/critters/month",
             ],

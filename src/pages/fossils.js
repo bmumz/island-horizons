@@ -61,7 +61,9 @@ export default class Fossils extends Component {
             how much do fossils sell for in animal crossing, how much do fossils sell for acnh, how much do fossils sell for
 
             "
-          />
+          >
+            <link rel="canonical" href="https://www.islandhorizons.com"></link>
+          </Head>
           <div className={fossilStyles.descriptionContainer}>
             <h1 className={fossilStyles.title}>Fossil Guide</h1>
             <div className={fossilStyles.fossilDescription}>

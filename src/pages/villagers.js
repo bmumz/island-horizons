@@ -75,8 +75,11 @@ export default class Villagers extends Component {
             animal crossing villager list, animal crossing villager birthdays, animal crossing villager popularity, animal crossing villager types, animal crossing villager personalities,
             animal crossing villager species, animal crossing villagers list, animal crossing villagers birthdays, animal crossing villagers  rare,
             animal crossing villagers personalities, animal crossing villagers species, animal crossing villagers names, acnh villagers, acnh villager personalities,
-            acnh villagers list, acnh villager tier, acnh villager birthday, acnh villager types, acnh villagers birthdays, acnh villagers personality, what villagers are in new horizons   "
-          />
+            acnh villagers list, acnh villager tier, acnh villager birthday, acnh villager types, acnh villagers birthdays, acnh villagers personality, 
+            what villagers are in new horizons"
+          >
+            <link rel="canonical" href="https://www.islandhorizons.com"></link>
+          </Head>
           <div className={villagerStyles.descriptionContainer}>
             {" "}
             <p className={villagerStyles.title}>List of Villagers</p>
