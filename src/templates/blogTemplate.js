@@ -38,9 +38,9 @@ const BlogTemplate = props => {
         description={props.data.contentfulBlogPost.excerpt}
       ></Head>
       <div className={templateStyles.layoutContainer}>
-        <p className={templateStyles.blogTitle}>
+        <h1 className={templateStyles.blogTitle}>
           {props.data.contentfulBlogPost.title}
-        </p>
+        </h1>
         <i className={templateStyles.publishedDate}>
           {props.data.contentfulBlogPost.publishedDate}
         </i>

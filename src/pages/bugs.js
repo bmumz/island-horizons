@@ -25,12 +25,22 @@ class Bugs extends Component {
       <div className={critterStyles.parentContainer}>
         <Layout>
           <Head
-            title="Bug Catching Guide"
-            description="A complete guide to catching all available bugs in New Horizons!"
-            keywords="Animal Crossing Bug Guide, Animal Crossing Bug Prices,
-            bug prices new horizons, bug prices animal crossing, ACNH bug prices,
-            bug catching guide, northern hemisphere bug prices, southern hemisphere bug prices,
-            Complete List of bugs Animal Crossing, how to catch bugs in Animal Crossing,"
+            title="Animal Crossing: New Horizons Bug Catching Guide"
+            description="A guide to catching all available bugs in New Horizons⁠— complete with prices!"
+            keywords="bug catching guide, animal crossing new horizons bug prices, animal crossing new horizons bugs,
+            animal crossing new horizons bug guide, animal crossing new horizons bug price list, 
+            animal crossing new horizons bugs and fish, animal crossing new horizons bug and fish guide,
+            animal crossing new horizons bug buyer, animal crossing bug prices, animal crossing bugs, animal crossing bug guide,
+            animal crossing bug list, animal crossing bugs and fish, animal crossing bug guy, animal crossing bug buyer,
+            acnh bug prices, giant water bug acnh, acnh giant water bug price, acnh giant water bug price, acnh water bug,
+            acnh water bug price, acnh bug guide, acnh fish and bug guide, new horizons bugs, new horizons bug prices,
+            new horizons bug guide, new horizons bug price list, new horizons bugs and fish, bugs animal crossing,
+            bug prices animal crossing, bug prices new horizons, bug prices animal crossing new horizons, bug prices acnh, bug prices, bug price list animal crossing,
+            bug prices flick animal crossing, bug prices flick,
+            how much do bugs sell for in animal crossing, how much do bugs sell for in animal crossing new horizons, how much do bugs sell for, 
+            how much do bugs sell for acnh, how much do bugs sell for flick, flick animal crossing, flick animal crossing new horizons,
+            flick acnh, flick bug prices
+            "
           />
 
           <Critters

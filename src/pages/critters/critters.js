@@ -73,7 +73,7 @@ class Critters extends Component {
     return (
       <div className={critterStyles.critterBody}>
         <div className={critterStyles.descriptionContainer}>
-          <p className={critterStyles.title}>{type} Catching Guide</p>
+          <h1 className={critterStyles.title}>{type} Catching Guide</h1>
           <div className={critterStyles.description}>
             This guide is a complete collection of all{" "}
             <b>

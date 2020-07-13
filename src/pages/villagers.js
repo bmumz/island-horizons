@@ -66,18 +66,16 @@ export default class Villagers extends Component {
       <div className="container">
         <Layout>
           <Head
-            title="New Horizons Complete Villagers List"
+            title="Animal Crossing: New Horizons Villagers Guide"
             description="A complete list of villagers in New Horizons!"
-            keywords="villagers animal crossing, villagers in new horizons, 
-            new villagers in animal crossing: new horizons, animal crossing: new horizons new villagers, 
-            animal crossing characters, acnh villagers, all animal crossing villagers, 
-            animal crossing villager list, animal crossing villager types, 
-            animal crossing personality types, cute animal crossing villagers, 
-            animal crossing cat villagers, animal crossing dog villagers, 
-            uchi villagers, smug villagers, snooty villagers, cranky villagers, lazy villagers,
-            peppy villagers, jock villagers, normal villagers,  
-            ankha acnh, raymond acnh, marshal acnh, pietro acnh, apollo acnh, wolfgang acnh,
-            bam acnh"
+            keywords="new horizons villagers, new  horizons villager guide, new horizons villagers birthdays, new horizons villagers by personality,
+            new horizons villagers by species, animal crossing new horizons villagers, animal crossing new horizons villagers list,
+            animal crossing new horizons villagers birthdays, animal crossing new horizons villagers personality, animal crossing new horizons villagers list,
+            animal crossing new horizons villagers by species, animal crossing new horizons villagers by personality, 
+            animal crossing villager list, animal crossing villager birthdays, animal crossing villager popularity, animal crossing villager types, animal crossing villager personalities,
+            animal crossing villager species, animal crossing villagers list, animal crossing villagers birthdays, animal crossing villagers  rare,
+            animal crossing villagers personalities, animal crossing villagers species, animal crossing villagers names, acnh villagers, acnh villager personalities,
+            acnh villagers list, acnh villager tier, acnh villager birthday, acnh villager types, acnh villagers birthdays, acnh villagers personality, what villagers are in new horizons   "
           />
           <div className={villagerStyles.descriptionContainer}>
             {" "}
@@ -149,13 +147,13 @@ export default class Villagers extends Component {
                       </div>
                     </div>
                     <div className={villagerStyles.villagerInfo}>
-                      <b>Personality: </b>
-                      {this.getPersonality(item)}
-                      <br />
-                      <b>Species: </b> {this.getSpecies(item)}
-                      <br />
-                      <br />
-                      <hr />
+                      <p>
+                        <b>Personality: </b>
+                        {this.getPersonality(item)}
+                        <br />
+                        <b>Species: </b> {this.getSpecies(item)}
+                      </p>
+                      <hr className={villagerStyles.hr} />
                       <p className={villagerStyles.capitalize}>
                         <b>catch-phrase: </b>"{item["catch-phrase"]}"
                       </p>

@@ -20,7 +20,7 @@
 
 .title {
   color: #888888;
-  font-family: "FinkHeavy";
+  font-family: "FinkHeavy", "Helvetica";
   margin-bottom: 20px;
 }
 
@@ -33,9 +33,9 @@
   }
 
   .blogPostTitle {
-    font-family: "FinkHeavy";
+    font-family: "FinkHeavy", "Helvetica";
     font-size: 30px;
-    letter-spacing: 1px;
+    font-weight: normal;
   }
   hr {
     background-color: #ccc;

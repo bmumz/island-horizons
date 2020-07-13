@@ -13,7 +13,7 @@
 }
 
 .title {
-  font-family: FinkHeavy;
+  font-family: FinkHeavy, Helvetica;
   font-size: 35px;
   text-align: left;
   margin-bottom: 5px;
@@ -99,7 +99,7 @@
 }
 
 .villager-name {
-  font-family: "FinkHeavy";
+  font-family: "FinkHeavy", Helvetica;
   font-size: 20px;
   padding: 5px;
 }
@@ -111,6 +111,12 @@
   width: 100px;
   height: 100px;
   margin-bottom: 0;
+}
+
+.hr {
+  background-color: #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .villager-info {

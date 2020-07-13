@@ -6,11 +6,12 @@
 }
 
 .title {
-  font-family: FinkHeavy;
+  font-family: FinkHeavy, Helvetica;
   font-size: 35px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .description-container {
@@ -73,7 +74,7 @@
 }
 
 .fossil-name {
-  font-family: FinkHeavy;
+  font-family: FinkHeavy, Helvetica;
   font-size: 19px;
   display: flex;
   flex-direction: column;

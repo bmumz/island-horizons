@@ -27,15 +27,24 @@ class SeaCreatures extends Component {
       <div className={critterStyles.parentContainer}>
         <Layout>
           <Head
-            title="Sea Creatures Catching Guide"
+            title="Animal Crossing: New Horizons Sea Creatures Guide"
             description="A complete guide to catching all the deep sea creatures in New Horizons!"
-            keywords="Sea Creatures Guide, Animal Crossing diving, diving in Animal Crossing, Animal Crossing swimming,
-             swimming in Animal Crossing, sea creatures Animal Crossing, 
-             Wave 1 update, Wave 1 update Animal Crossing, Summer update Animal Crossing,
-              wetsuit Animal Crossing, Sea Creatures New Horizons, 
-              Sea Creature prices, deep sea creatures Animal Crossing, 
-              Animal Crossing Sea Creatures price, Animal Crossing Pascal, 
-              Sea Creatures Complete List, How to find and catch sea creatures
+            keywords="sea creatures animal crossing july, sea creatures names, sea creatures list, sea creatures animal crossing new horizons price,
+            sea creatures animal crossing wiki, sea creatures animal crossing new horizons southern hemisphere,
+            sea creatures animal crossing new horizons price, sea creatures animal crossing new horizons july,
+            sea creatures animal crossing times, sea creatures acnh, sea creatures acnh northern hemisphere,
+            sea creatures acnh southern hemisphere, sea creatures acnh cj, sea creatures acnh price list, sea creatures new horizons,
+            sea creatures new horizons july, sea creatures new horizons price, sea creatures new horizons guide, deep sea creatures new horizons,
+            new horizons sea creature list, new horizons sea creatures guide, new horizons sea creatures price list,
+            new horizons sea creature list july, new horizons sea creature, new horizons sea creatures southern hemisphere,
+            new horizons sea creatures cj, new horizons sea creature too fast, new horizons sea creatures northern hemisphere,
+            animal crossing new horizons sea creatures, animal crossing new horizons sea creatures museum, animal crossing new horizons sea creatures price,
+            animal crossing new horizons sea creatures july, animal crossing new horizons sea creatures july list, animal crossing new horizons sea creatures cj,
+            animal crossing new horizons sea creatures by month, animal crossing sea creatures july, animal crossing sea creatures prices, animal crossing sea creatures northern hemisphere,
+            animal crossing sea creatures southern, animal crossing sea creatures list, animal crossing sea creatures available now,
+            acnh sea creatures, acnh sea creatures guide, acnh sea creatures checklist, acnh sea creatures value, acnh sea creatures july,
+            acnh sea creatures list july, acnh sea creatures northern, acnh sea creatures prices, how much do sea creatures sell for animal crossing,
+            how much do sea creatures sell for acnh, how much do sea creatures sell for
           "
           />
 

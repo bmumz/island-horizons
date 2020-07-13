@@ -29,7 +29,7 @@ export default class Fossils extends Component {
   getName = item => item.name["name-USen"]
 
   render() {
-    let items = this.state.items || []
+    let items = this.state.items ? [...this.state.items] : []
     let search = this.state.search
 
     if (search.length > 0) {
@@ -41,64 +41,48 @@ export default class Fossils extends Component {
 
     if (this.state.isSort === true) {
       items.sort((a, b) => (a.price < b.price ? 1 : -1))
-    } else {
-      items.sort((a, b) => a.price - b.price)
     }
 
     return (
       <div className={fossilStyles.body}>
         <Layout>
           <Head
-            title="Fossil Guide"
-            description="A complete guide to all the fossils in New Horizons!"
-            keywords="fossils animal crossing: new horizons, animal crossing fossils, fossils animal crossing, acnh fossils, fossil guide acnh, acnh fossil guide, finding fossils acnh, finding fossils animal crossing, how many fossils can i get per day acnh, digging up fossils acnh, digging up fossils animal crossing, should i donate my fossils acnh, fossil prices acnh, fossil prices animal crossing, fossil prices animal crossing: new horizons, fossil prices, fossil prices acnh"
+            title="A Complete Guide to Fossils in Animal Crossing: New Horizons"
+            description="All you need to know about fossils in New Horizons- including their prices!"
+            keywords="fossil guide, new horizons fossils, fossils in new horizons, new horizons fossil list, new horizons fossils per day,
+            new horizons fossil prices, new horizons fossil guide, new horizons fossil models, new horizons fossil price list,
+            animal crossing new horizons fossils, animal crossing new horizons fossils list, animal crossing new horizons fossils per day,
+            animal crossing new horizons fossils price, animal crossing new horizons fossils list with pictures, animal crossing new horizons fossils with pictures,
+            animal crossing fosisl list, animal crossing fossil prices, animal crossing fossil checklist, animal crossing fossils per day,
+            animal crossing fossils new horizons, animal crossing fossil design, acnh fossil list, acnh fossils,
+            acnh fossil checklist, acnh fossil price, acnh fossil guide, acnh fossils per day, acnh fossil list with pictures, 
+            fossils animal crossing, fossil animal crossing, fossil animal crossing new horizons, fossil animal crossing price,
+            fossils animal crossing, fossils animal crossing new horizons, fossils animal crossing list, fossils animal crossing pictures,
+            how much do fossils sell for in animal crossing, how much do fossils sell for acnh, how much do fossils sell for
+
+            "
           />
           <div className={fossilStyles.descriptionContainer}>
-            <p className={fossilStyles.title}>Fossil Guide</p>
+            <h1 className={fossilStyles.title}>Fossil Guide</h1>
             <div className={fossilStyles.fossilDescription}>
               There are a total of{" "}
               <i>
                 <b>73 fossils </b>{" "}
               </i>
-              to collect in Animal Crossing: New Horizons! It is recommended you
-              donate the fossils to Blathers at your island's museum, but, if
-              you have duplicates, you are able to sell them for some quick
-              Bells!
-              {/* <div className={fossilStyles.diggingFossils}>
-                <h4 className={fossilStyles.listItem}>
-                  Step 1: Finding Fossils
-                </h4>
-                Each day, a total of{" "}
-                <b>
-                  <i>4 fossils</i>
-                </b>{" "}
-                will spawn on your island in the shape of a star. These can
-                spawn anywhere on your island (in grass/dirt/snow, but never on
-                a path).
-                <img
-                  src={"https://i.ibb.co/WnCCsD9/fossil-Outline.jpg"}
-                  alt="Fossil Outline"
-                  className={fossilStyles.fossilImg}
-                />
-                <h4 className={fossilStyles.listItem}>
-                  Step 2: Digging Up Fossils
-                </h4>
-                Once you've found a fossil, get out your trusty shovel! Press 'Y' near the star shape. 
-                <img
-                  src={"https://i.ibb.co/yn30Vts/dug-Fossil.jpg"}
-                  alt="Dig Up Fossils"
-                  className={fossilStyles.fossilImg}
-                />
-                <h4 className={fossilStyles.listItem}>
-                  Step 3: Donating Fossils to Blathers
-                </h4>
-                <img
-                  src={"https://i.ibb.co/zP5LVWk/donate-Fossil.jpg"}
-                  alt="Donate Fossils to Blathers"
-                  className={fossilStyles.fossilImg}
-                />
-              </div> */}
+              to collect in Animal Crossing: New Horizons! Each day, 4 fossils
+              will spawn on your island in the shape of a star.
+              <img
+                src={"https://i.ibb.co/WnCCsD9/fossil-Outline.jpg"}
+                alt="Fossil Outline"
+                className={fossilStyles.fossilImg}
+              />
+              Simply dig them up with a shovel, then bring them to your island's
+              museum to get assessed. It is recommended you donate the fossils
+              to Blathers, but, if you have duplicates, you are able to sell
+              them for some quick Bells!
             </div>
+            <br />
+            <h1 className={fossilStyles.title}>List of Fossils</h1>
           </div>
 
           <div className={fossilStyles.navContainer}>

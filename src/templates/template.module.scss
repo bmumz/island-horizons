@@ -14,14 +14,22 @@
   font-family: FinkHeavy;
   font-size: 35px;
   text-align: left;
+  font-weight: normal;
 }
 
+p {
+  margin-top: 5px;
+}
 hr {
   background-color: transparent;
 }
 h3 {
   margin-top: 20px;
   margin-bottom: 15px;
+}
+
+h1 {
+  margin-bottom: 0;
 }
 
 .published-date {

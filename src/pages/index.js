@@ -31,11 +31,11 @@ const Home = () => {
             return (
               <div key={edge.node.slug} className={blogStyles.post}>
                 <Link to={`/blog/${edge.node.slug}`}>
-                  <p className={blogStyles.blogPostTitle}>
+                  <h1 className={blogStyles.blogPostTitle}>
                     <span className={blogStyles.highlightTitle}>
                       {edge.node.title}
                     </span>
-                  </p>
+                  </h1>
                   <div className={blogStyles.date}>
                     {edge.node.publishedDate}
                   </div>
