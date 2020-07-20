@@ -13,7 +13,6 @@ module.exports = {
       "An Animal Crossing New Horizons blog providing tips and tricks for making your island a better place!",
     keywords: [
       "Animal Crossing New Horizons blog",
-      "Island Horizons blog",
       "Island Horizons",
       "Island Horizons Animal Crossing",
       "Animal Crossing blog",
