@@ -10,7 +10,7 @@
   text-decoration: none;
   position: relative;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 
 .nav-container {
@@ -34,7 +34,8 @@
   font-size: 4rem;
   text-decoration: none;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .title:hover {
@@ -45,7 +46,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
   margin: 2px;
   // margin-left: 200px;
 }
@@ -60,7 +60,7 @@
   font-size: 1.1rem;
   text-shadow: 2px 2px 1px #8d4e21;
   text-decoration: none;
-  padding: 0 12px;
+  padding: 0 8px;
 }
 
 .nav-button {
@@ -73,6 +73,8 @@
   position: relative;
   background-color: transparent;
   cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .nav-item:hover {
@@ -149,8 +151,6 @@
   }
 
   .nav-button {
-    padding-left: 5px;
-    padding-right: 5px;
     height: 100%;
   }
 }

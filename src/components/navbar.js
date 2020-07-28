@@ -33,7 +33,7 @@ const Navbar = () => {
                     navItemLink: "/",
                   },
                   {
-                    navItemName: "critterpedia guide",
+                    navItemName: "critterpedia",
                     menuItems: [
                       {
                         link: "/seacreatures",
@@ -54,7 +54,7 @@ const Navbar = () => {
                     navItemLink: "/villagers",
                   },
                   {
-                    navItemName: "fossil guide",
+                    navItemName: "fossils",
                     navItemLink: "/fossils",
                   },
 
