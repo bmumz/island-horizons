@@ -7,7 +7,7 @@ import headerStyles from "./header.module.scss"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      headerImage: file(relativePath: { eq: "woodheader.png" }) {
+      headerImage: file(relativePath: { eq: "villager02.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             base64

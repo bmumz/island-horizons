@@ -1,7 +1,8 @@
 .container {
   // max-width: 750px;
-  background-color: #a6dbac;
-  background-image: url("https://i.ibb.co/YZFZDYJ/ACgrassspread.png");
+  background-color: #d8b594;
+  // SPRING/SUMMER background-image: url("https://i.ibb.co/YZFZDYJ/ACgrassspread.png");
+  background-image: url("https://i.ibb.co/S35mB3M/ACgrassspreadbrown.png");
   width: 100%;
   height: auto;
   padding-bottom: 30px;
@@ -11,8 +12,7 @@
 .navigation {
   width: 100vw;
   margin: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .content {
@@ -26,15 +26,11 @@
 
   min-height: 100vh;
   padding-top: 2rem;
-
   max-width: 750px;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 420px) {
-  .container {
-    padding-top: 2rem;
-  }
+@media only screen and (max-width: 800px) {
   .content {
     margin: 20px;
   }

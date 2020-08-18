@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { useState } from "react"
 import headerStyles from "./header.module.scss"
-// import Image from "./image"
+import Image from "./image"
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
@@ -17,14 +17,14 @@ const Navbar = () => {
   return (
     <div className="body">
       <div className={headerStyles.navContainer}>
-        {" "}
+        <div className={headerStyles.imageContainer}>
+          <div className={headerStyles.villager}>
+            <Image alt={data.site.siteMetadata.title} />{" "}
+          </div>
+        </div>
+
         <div className={headerStyles.navigation}>
           <header className={headerStyles.header}>
-            {" "}
-            {/* <Image /> */}
-            <Link className={headerStyles.title} to="/">
-              {data.site.siteMetadata.title}
-            </Link>
             <div className={headerStyles.navbar}>
               <NavItems
                 navigationLinks={[
