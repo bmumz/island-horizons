@@ -11,7 +11,7 @@ const NotFound = props => {
       <h1>404 Error: Page not found!</h1>
       <Img fluid={props.data.errorImage.childImageSharp.fluid} />
       <p>
-        <Link to="/">Head home</Link>
+        <Link to="/">Return home...</Link>
       </p>
     </Layout>
   )
