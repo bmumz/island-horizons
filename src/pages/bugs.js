@@ -15,6 +15,7 @@ class Bugs extends Component {
     fetch("https://acnhapi.com/v1/bugs/")
       .then(response => response.json())
       .then(results => {
+        console.log(results)
         const items = Object.values(results)
         this.setState({ items })
       })
