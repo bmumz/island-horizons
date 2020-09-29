@@ -14,7 +14,6 @@ const Image = () => {
             tracedSVG
             aspectRatio
             src
-            srcSet
             srcWebp
             srcSetWebp
             sizes
@@ -32,6 +31,7 @@ const Image = () => {
         <Img
           fluid={data.headerImage.childImageSharp.fluid}
           className={headerStyles.headerImg}
+          media=""
         />
       </Link>
     </div>
