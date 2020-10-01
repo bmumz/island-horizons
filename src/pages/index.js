@@ -1,55 +1,17 @@
 import React from "react"
+import "normalize.css/normalize.css"
 import Layout from "../components/layout"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import blogStyles from "./blog.module.scss"
-import Head from "../components/head"
+import BlogPosts from "../components/blogPosts"
+import SEO from "../components/seo"
+import "../styles/styles.scss"
 
-const Home = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-        edges {
-          node {
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
-            excerpt
-          }
-        }
-      }
-    }
-  `)
-
+const App = () => {
   return (
     <Layout>
-      <Head title="Home" keywords="" description="" />
-      <div className={blogStyles.blogPostList}>
-        <div className={blogStyles.cards}>
-          {" "}
-          <p className={blogStyles.title}>Recent Posts</p>
-          {data.allContentfulBlogPost.edges.map(edge => {
-            return (
-              <div key={edge.node.slug} className={blogStyles.post}>
-                <Link to={`/blog/${edge.node.slug}`}>
-                  <h1 className={blogStyles.blogPostTitle}>
-                    <span className={blogStyles.highlightTitle}>
-                      {edge.node.title}
-                    </span>
-                  </h1>
-                  <div className={blogStyles.date}>
-                    {edge.node.publishedDate}
-                  </div>
-
-                  <div className={blogStyles.excerpt}>{edge.node.excerpt}</div>
-                </Link>
-                <hr />
-              </div>
-            )
-          })}
-        </div>
-      </div>
+      <SEO title="Home" keywords="" description="" />
+      <BlogPosts />
     </Layout>
   )
 }
 
-export default Home
+export default App

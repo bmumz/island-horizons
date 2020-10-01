@@ -1,6 +1,5 @@
 import React from "react"
 import { Component } from "react"
-import critterStyles from "./critters.module.scss"
 import Month from "./month"
 import Time from "./time"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -71,10 +70,10 @@ class Critters extends Component {
     }
 
     return (
-      <div className={critterStyles.critterBody}>
-        <div className={critterStyles.descriptionContainer}>
-          <h1 className={critterStyles.title}>{type} Catching Guide</h1>
-          <div className={critterStyles.description}>
+      <div>
+        <div className="content">
+          <h1 className="content__title">{type} Catching Guide</h1>
+          <p className="content__description">
             This guide is a complete collection of all{" "}
             <b>
               <i>
@@ -85,89 +84,103 @@ class Critters extends Component {
             information to help you fill up your museum faster! It includes
             <i> where</i> to find them, <i>when</i> to find them (time of day
             and year), as well as <i>what</i> you can sell them for!
-          </div>
-          <div className={critterStyles.description}>
+          </p>
+          <p className="content__description">
             <b>
               Before you get started, remember to select the hemisphere your
               island is on to get accurate results.
             </b>
-          </div>
-
-          <div className={critterStyles.description}>
+          </p>
+          <p className="content__description">
             Be sure to also check out our {link1} and {link2}!
-          </div>
+          </p>
+
+          <p className="content__description"></p>
         </div>
-        <div className={critterStyles.critterNav}>
-          <div className={critterStyles.searchContainer}>
+        <div className="content__nav">
+          <div className="content__searchContainer">
             <input
               type="text"
               value={this.state.search}
               onChange={this.onSearch}
-              className={critterStyles.searchBar}
+              className="content__searchbox"
               placeholder="Search"
             />
 
-            <div className={critterStyles.sortFont}>
+            <div className="content__sort">
               <input
                 type="checkbox"
                 onClick={this.onSort}
-                className={critterStyles.sortPrice}
+                className="content__sortBox"
               />
               Sort by Price (Highest to Lowest)
             </div>
           </div>
-          <div className={critterStyles.hemisphereToggle}>
-            <label className={critterStyles.switch}>
+          <div className="content__toggle">
+            <label className="content__switch">
               <input type="checkbox" onChange={this.onToggle} />
-              <span className={critterStyles.slider}></span>
+              <span className="content__slider"></span>
             </label>
-            <div className={critterStyles.hemisphereOption}>
-              Northern <br />
-              Southern
+            <div className="content__options">
+              <p>Northern</p>
+              <p>Southern</p>
             </div>
           </div>
         </div>
-        <div className={critterStyles.critterContainer}>
+        <div className="cards">
           {collection &&
             collection.map((item, index) => (
-              <div key={index} className={critterStyles.critterCard}>
-                <div className={critterStyles.critterProfile}>
-                  <div className={critterStyles.critterName}>
-                    <p>
+              <div key={index} className="card">
+                <div className="card__profile">
+                  <div>
+                    <p className="card__name">
                       {" "}
-                      <span className={critterStyles.nameHighlight}>
+                      <span className="card__name--highlight">
                         {this.getName(item)}
                       </span>
                     </p>
                   </div>
                   <img
-                    className={critterStyles.critterImage}
+                    className="card__img"
                     src={item.icon_uri}
                     alt={this.getName(item)}
                   />
                 </div>
-                <div className={critterStyles.critterInfo}>
-                  <div className={critterStyles.prices}>
-                    <b>Nook's Cranny: </b>
-                    {item.price} Bells
-                    <br />
-                    <b> {sellerName} </b>
-                    {item[seller]} {price}
-                    <br />
-                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {location}
-                    {item.availability["location"]}
-                    <br />
-                    <b>{shadow}</b> {item[shadowSize]}
-                    <br />
-                    <b>{speed}</b> {item[speedVelocity]}
-                  </div>
+                <div className="card__content">
+                  <div>
+                    <p>
+                      <b>Nook's Cranny: </b>
+                      {item.price} Bells
+                    </p>
 
-                  <div className={critterStyles.hemisphereDetails}>
-                    <div className={critterStyles.availabilityCenter}>
-                      {hemisphere}
-                    </div>
-                    <Month>{item.availability[hemisphereIndex]}</Month>
-                    <Time>{item.availability["time"]}</Time>
+                    <p>
+                      <b> {sellerName} </b>
+                      {item[seller]} {price}
+                    </p>
+
+                    <p>
+                      <FontAwesomeIcon icon={faMapMarkerAlt} /> {location}
+                      {item.availability["location"]}
+                    </p>
+
+                    <p>
+                      <b>{shadow}</b> {item[shadowSize]}
+                    </p>
+
+                    <p>
+                      <b>{speed}</b> {item[speedVelocity]}
+                    </p>
+                  </div>
+                  <div className="card__info">
+                    <p>
+                      <b>{hemisphere}</b>
+                    </p>
+                    <p>
+                      <Month>{item.availability[hemisphereIndex]}</Month>
+                    </p>
+                    <p>
+                      <Time>{item.availability["time"]}</Time>
+                    </p>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,18 @@
+.layout {
+  background-image: url("https://i.ibb.co/S35mB3M/ACgrassspreadbrown.png");
+  // SPRING/SUMMER background-image: url("https://i.ibb.co/YZFZDYJ/ACgrassspread.png");
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.layout__blogContent {
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 20px;
+  padding: $l-size;
+  max-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}

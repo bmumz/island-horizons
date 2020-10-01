@@ -2,9 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
-import templateStyles from "./template.module.scss"
-
-import Head from "../components/head"
+import SEO from "../components/seo"
 
 export const query = graphql`
   query($slug: String!) {
@@ -32,24 +30,22 @@ const BlogTemplate = props => {
   }
   return (
     <Layout>
-      <Head
+      <SEO
         title={props.data.contentfulBlogPost.title}
         keywords={props.data.contentfulBlogPost.tags}
         description={props.data.contentfulBlogPost.excerpt}
-      ></Head>
-      <div className={templateStyles.layoutContainer}>
-        <h1 className={templateStyles.blogTitle}>
-          {props.data.contentfulBlogPost.title}
-        </h1>
-        <i className={templateStyles.publishedDate}>
+      />
+      <div>
+        <h1 className="blog__title">{props.data.contentfulBlogPost.title}</h1>
+        <p className="blog__date">
           {props.data.contentfulBlogPost.publishedDate}
-        </i>
-        <div className={templateStyles.blogPost}>
+        </p>
+        <p className="blog__content">
           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}
-        </div>
+        </p>
       </div>
     </Layout>
   )

@@ -1,0 +1,136 @@
+.content {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    color: #f2be7e;
+    text-decoration: none;
+  }
+}
+
+.content__title {
+  font-family: FinkHeavy;
+  text-transform: capitalize;
+}
+
+.content__description {
+  font-size: $m-size;
+  letter-spacing: normal;
+  text-align: initial;
+  width: 95%;
+}
+
+.content__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $s-size;
+}
+
+.content__searchContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0.2;
+}
+
+.content__searchbox {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: $s-size;
+  width: 90%;
+  padding: 0.6rem $s-size 0.6rem $s-size;
+  outline: none;
+  font-size: $m-size;
+}
+
+.content__searchbox--villagers {
+  width: 70%;
+}
+
+.content__sort {
+  margin: 0 $s-size;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.content__sortBox {
+  margin-right: $s-size;
+}
+
+.content__toggle {
+  display: flex;
+  align-items: center;
+  margin-left: $s-size;
+}
+
+.content__options {
+  display: flex;
+  flex-direction: column;
+  margin-left: $s-size;
+
+  p {
+    font-size: 1.2rem;
+    letter-spacing: normal;
+    margin: $s-size 0 $s-size 0;
+  }
+}
+
+.content__switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 4.5rem;
+}
+
+.content__slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2d697;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content__slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  right: 1px;
+  top: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .content__slider {
+  background-color: #f2be7e;
+}
+
+input:focus + .content__slider {
+  box-shadow: 0 0 1px #f2be7e;
+}
+
+input:checked + .content__slider:before {
+  -webkit-transform: translateY(22px);
+  -ms-transform: translateY(22px);
+  transform: translateY(22px);
+}
+
+.content__list {
+  ul {
+    list-style-type: circle;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

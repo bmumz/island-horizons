@@ -1,0 +1,49 @@
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: $almost-black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $almost-black;
+  cursor: pointer;
+}
+
+a:active {
+  color: $almost-black;
+}
+body {
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: darken($yellow-link, 10);
+  text-shadow: 3px 2px 1px $brown-outline;
+  outline: none;
+}
+
+h1 {
+  font-family: "FinkHeavy";
+  font-size: $l-size;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+p {
+  margin-bottom: $m-size;
+}
+
+img {
+  width: 100%;
+  margin: 0 0 $s-size 0;
+}
+
+ul {
+  list-style: none;
+}

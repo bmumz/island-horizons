@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import critterStyles from "./critters.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-solid-svg-icons"
 
@@ -12,8 +11,7 @@ export default class Time extends Component {
 
     return (
       <div>
-        <FontAwesomeIcon icon={faClock} />
-        <span className={critterStyles.time}>{time}</span>
+        <FontAwesomeIcon icon={faClock} /> <span>{time}</span>
       </div>
     )
   }

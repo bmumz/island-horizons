@@ -2,12 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Head from "../components/head"
+import SEO from "../components/seo"
 
 const NotFound = props => {
   return (
     <Layout>
-      <Head title="404 Error: Page Not Found" />
+      <SEO title="404 Error: Page Not Found" />
       <h1>404 Error: Page not found!</h1>
       <Img fluid={props.data.errorImage.childImageSharp.fluid} />
       <p>

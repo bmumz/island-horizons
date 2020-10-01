@@ -1,18 +1,15 @@
 import React from "react"
-import Navbar from "./navbar"
+import Header from "./Header"
 import Footer from "./footer"
-
-import "../styles/index.scss"
-import layoutStyles from "./layout.module.scss"
 
 const Layout = props => {
   return (
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.navigation}>
-        <Navbar />
+    <div className="layout">
+      <div className="">
+        <Header />
       </div>
 
-      <div className={layoutStyles.content}>
+      <div className="layout__blogContent">
         {props.children}
         <Footer />
       </div>

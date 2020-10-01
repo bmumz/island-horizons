@@ -1,0 +1,53 @@
+.blog {
+  padding: $s-size;
+}
+
+.blog__recent {
+  font-family: FinkHeavy;
+  font-size: 1.8rem;
+  color: $mid-grey;
+  margin: 0 0 $s-size 0;
+}
+
+.blog__title {
+  margin: 0;
+}
+
+.blog__titleHighlight:hover {
+  box-shadow: inset 0 -20px #f2d697;
+}
+
+.blog__date {
+  color: $mid-grey;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: $m-size;
+    font-style: italic;
+  }
+}
+
+.blog__excerpt {
+  margin: 0;
+
+  font-size: $m-size;
+}
+
+.blog__content {
+  margin-top: $m-size;
+
+  font-size: $m-size;
+
+  a {
+    color: #f2be7e;
+    text-decoration: none;
+  }
+}
+
+.blog__divider {
+  margin-top: $m-size;
+  margin-bottom: $m-size;
+  height: 0.2px;
+  border: none;
+  background-color: $light-grey;
+}

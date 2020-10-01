@@ -1,7 +1,6 @@
 import React, { Component } from "react"
-import Head from "../components/head"
+import SEO from "../components/seo"
 import Layout from "../components/layout"
-import villagerStyles from "./villagers.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBirthdayCake } from "@fortawesome/free-solid-svg-icons"
 
@@ -63,12 +62,11 @@ export default class Villagers extends Component {
     }
 
     return (
-      <div className="container">
-        <Layout>
-          <Head
-            title="Animal Crossing: New Horizons Villagers Guide"
-            description="A complete list of villagers in New Horizons!"
-            keywords="new horizons villagers, new  horizons villager guide, new horizons villagers birthdays, new horizons villagers by personality,
+      <Layout>
+        <SEO
+          title="Animal Crossing: New Horizons Villagers Guide"
+          description="A complete list of villagers in New Horizons!"
+          keywords="new horizons villagers, new  horizons villager guide, new horizons villagers birthdays, new horizons villagers by personality,
             new horizons villagers by species, animal crossing new horizons villagers, animal crossing new horizons villagers list,
             animal crossing new horizons villagers birthdays, animal crossing new horizons villagers personality, animal crossing new horizons villagers list,
             animal crossing new horizons villagers by species, animal crossing new horizons villagers by personality, 
@@ -77,96 +75,87 @@ export default class Villagers extends Component {
             animal crossing villagers personalities, animal crossing villagers species, animal crossing villagers names, acnh villagers, acnh villager personalities,
             acnh villagers list, acnh villager tier, acnh villager birthday, acnh villager types, acnh villagers birthdays, acnh villagers personality, 
             what villagers are in new horizons"
-          >
-            <link rel="canonical" href="https://www.islandhorizons.com"></link>
-          </Head>
-          <div className={villagerStyles.descriptionContainer}>
-            {" "}
-            <p className={villagerStyles.title}>List of Villagers</p>
-            <div className={villagerStyles.villagerDescription}>
-              <p>
-                Animal Crossing: New Horizons features many returning— and 8
-                brand new villagers of <b>8 Personality Types:</b>
-                <div className={villagerStyles.personalityTypes}>
-                  <div className={villagerStyles.maleVillagers}>
-                    <br />
-                    <u>
-                      <b>Male Villagers:</b>
-                    </u>
-                    <br />
-                    <ul>
-                      <li>Lazy</li>
-                      <li>Smug</li>
-                      <li>Jock</li>
-                      <li>Cranky</li>
-                    </ul>
-                  </div>
-                  <br />
-                  <div className={villagerStyles.femaleVillagers}>
-                    <br />
-                    <u>
-                      <b>Female Villagers:</b>
-                    </u>
-                    <br />
-                    <ul>
-                      <li>Normal</li>
-                      <li>Snooty</li>
-                      <li>Peppy</li>
-                      <li>Uchi (Sisterly)</li>
-                    </ul>
-                  </div>
+        >
+          <link rel="canonical" href="https://www.islandhorizons.com"></link>
+        </SEO>
+        <div className="content">
+          {" "}
+          <h1 className="content__title">List of Villagers</h1>
+          <div className="content__description">
+            <p>
+              Animal Crossing: New Horizons features many returning— and eight
+              brand new villagers of different <b>Personality Types:</b>
+              <div className="content__list">
+                <div>
+                  <u>
+                    <b>Male Villagers:</b>
+                  </u>
+
+                  <ul>
+                    <li>Lazy</li>
+                    <li>Smug</li>
+                    <li>Jock</li>
+                    <li>Cranky</li>
+                  </ul>
                 </div>
-                <br />
-              </p>
-            </div>
-            <div className={villagerStyles.searchContainer}>
-              <input
-                type="text"
-                value={this.state.search}
-                onChange={this.onSearch}
-                className={villagerStyles.searchBar}
-                placeholder="Search by Name, Species or Personality"
-                maxLength="25"
-              />
-            </div>
-            {items &&
-              items.map((item, index) => (
-                <div key={index} className={villagerStyles.villagerContainer}>
-                  <div className={villagerStyles.villagerCard}>
-                    <div className={villagerStyles.villagerProfile}>
-                      <div className={villagerStyles.villagerName}>
-                        <span className={villagerStyles.nameHighlight}>
-                          {item.name["name-USen"]}
-                        </span>
-                      </div>
-                      <img
-                        src={item.image_uri}
-                        alt={this.getName(item)}
-                        className={villagerStyles.villagerImg}
-                      />
-                      <div className={villagerStyles.villagerBirthday}>
-                        <FontAwesomeIcon icon={faBirthdayCake} />{" "}
-                        {item["birthday-string"]}
-                      </div>
-                    </div>
-                    <div className={villagerStyles.villagerInfo}>
-                      <p>
-                        <b>Personality: </b>
-                        {this.getPersonality(item)}
-                        <br />
-                        <b>Species: </b> {this.getSpecies(item)}
-                      </p>
-                      <hr className={villagerStyles.hr} />
-                      <p className={villagerStyles.capitalize}>
-                        <b>catch-phrase: </b>"{item["catch-phrase"]}"
-                      </p>
-                    </div>
-                  </div>
+
+                <div>
+                  <u>
+                    <b>Female Villagers:</b>
+                  </u>
+
+                  <ul>
+                    <li>Normal</li>
+                    <li>Snooty</li>
+                    <li>Peppy</li>
+                    <li>Uchi (Sisterly)</li>
+                  </ul>
                 </div>
-              ))}
+              </div>
+            </p>
           </div>
-        </Layout>
-      </div>
+          <input
+            type="text"
+            value={this.state.search}
+            onChange={this.onSearch}
+            className="content__searchbox--villagers content__searchbox"
+            placeholder="Search by Name, Species or Personality"
+          />
+          {items &&
+            items.map((item, index) => (
+              <div key={index} className="cards">
+                <div className="card__villagers ">
+                  <div className="card__profile">
+                    <div className="card__name">
+                      <span className="card__name--highlight">
+                        {item.name["name-USen"]}
+                      </span>
+                    </div>
+                    <img
+                      src={item.image_uri}
+                      alt={this.getName(item)}
+                      className="card__villagerImg"
+                    />
+                    <p className="card__info--villagers">
+                      <FontAwesomeIcon icon={faBirthdayCake} />{" "}
+                      <span>{item["birthday-string"]}</span>
+                    </p>
+                  </div>
+                  <div className="card__info--villagers">
+                    <p>
+                      <b>Personality: </b>
+                      {this.getPersonality(item)}
+                      <br />
+                      <b>Species: </b> {this.getSpecies(item)}
+                      <hr />
+                      <b>Catch-Phrase: </b>"{item["catch-phrase"]}"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </div>
+      </Layout>
     )
   }
 }

@@ -1,9 +1,9 @@
 import React from "react"
 import { Component } from "react"
-import critterStyles from "./critters/critters.module.scss"
+
 import Critters from "./critters/critters"
 import Layout from "../components/layout"
-import Head from "../components/head"
+import SEO from "../components/seo"
 import { Link } from "gatsby"
 
 class Fish extends Component {
@@ -23,9 +23,9 @@ class Fish extends Component {
   render() {
     let items = this.state.items || []
     return (
-      <div className={critterStyles.parentContainer}>
+      <div>
         <Layout>
-          <Head
+          <SEO
             title="Animal Crossing: New Horizons Fish Catching Guide"
             description="A guide to catching all available fish in New Horizons⁠— complete with prices!"
             keywords="fish catching guide, animal crossing new horizons fish, animal crossing new horizons fish list, 
@@ -43,7 +43,7 @@ class Fish extends Component {
          "
           >
             <link rel="canonical" href="https://www.islandhorizons.com"></link>
-          </Head>
+          </SEO>
           <Critters
             critters={items}
             seller="price-cj"
@@ -53,8 +53,8 @@ class Fish extends Component {
             shadowSize="shadow"
             type="fish"
             amount="80"
-            link1=<Link to="/bugs">Bug Catching Guide</Link>
-            link2=<Link to="/seacreatures">Sea Creature Catching Guide</Link>
+            link1={<Link to="/bugs">Bug Catching Guide</Link>}
+            link2={<Link to="/seacreatures">Sea Creature Catching Guide</Link>}
           />
         </Layout>
       </div>
