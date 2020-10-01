@@ -21,6 +21,8 @@ const Image = () => {
         <Img
           fluid={data.headerImage.childImageSharp.fluid}
           className="headerImg"
+          media="image"
+          type="image"
         />
       </Link>
     </div>
