@@ -1,11 +1,11 @@
 import React from "react"
-import Header from "./Header"
+import Header from "./header"
 import Footer from "./footer"
 
 const Layout = props => {
   return (
     <div className="layout">
-      <div className="">
+      <div>
         <Header />
       </div>
 
