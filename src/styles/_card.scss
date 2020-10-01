@@ -8,8 +8,7 @@
 
 .card {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: baseline;
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ccc;
@@ -117,4 +116,11 @@
 .card__info--fossils {
   font-size: 1.2rem;
   text-align: center;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }

@@ -13,6 +13,7 @@ const Header = () => {
       }
     }
   `)
+
   return (
     <div>
       <div className="headerImg__container">
