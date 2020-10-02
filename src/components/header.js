@@ -18,7 +18,7 @@ const Header = () => {
     <div>
       <div className="headerImg__container">
         <div className="headerImg">
-          <Image alt={data.site.siteMetadata.title} />{" "}
+          <Image alt={data.site.siteMetadata.title} />
         </div>
       </div>
 

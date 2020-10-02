@@ -20,7 +20,6 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "core-js": "^3.6.5",
     "gatsby": "^2.24.67",
-    "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^2.4.20",
     "gatsby-plugin-google-analytics": "^2.3.15",
     "gatsby-plugin-manifest": "^2.4.33",

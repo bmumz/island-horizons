@@ -8,7 +8,10 @@ const Image = () => {
       headerImage: file(relativePath: { eq: "villager02.png" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            base64
+            aspectRatio
+            src
+            sizes
           }
         }
       }

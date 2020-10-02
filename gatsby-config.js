@@ -118,6 +118,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sass",
+
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
