@@ -11,7 +11,6 @@ const Image = () => {
             base64
             aspectRatio
             src
-            sizes
           }
         }
       }
