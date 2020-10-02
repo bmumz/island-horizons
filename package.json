@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "island-horizons",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "An Animal Crossing fansite bringing you tips and tricks to bring to your island!",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
