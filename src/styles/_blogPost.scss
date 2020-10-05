@@ -19,10 +19,11 @@
 
 .blog__date {
   color: $mid-grey;
+  font-size: $m-size;
   p {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: $m-size;
+
     font-style: italic;
   }
 }
