@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://inspiring-fermi-539477.netlify.app/"
+  to = "https://islandhorizons.com"
+  status = 301
+  force = true 
