@@ -1,0 +1,13 @@
+.fossils {
+  width: 75vw;
+  p {
+    font-size: $m-size;
+    margin-left: $s-size;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .fossils {
+    width: 45vw;
+  }
+}

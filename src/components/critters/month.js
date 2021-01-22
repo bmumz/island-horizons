@@ -48,9 +48,9 @@ export default class Month extends Component {
     }
 
     return (
-      <div>
+      <>
         <FontAwesomeIcon icon={faCalendarAlt} /> <span>{monthNames}</span>
-      </div>
+      </>
     )
   }
 }

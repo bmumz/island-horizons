@@ -1,5 +1,5 @@
 import React from "react"
-// import "normalize.css/normalize.css"
+import "normalize.css/normalize.css"
 import Layout from "../components/layout"
 import BlogPosts from "../components/blogPosts"
 import SEO from "../components/seo"

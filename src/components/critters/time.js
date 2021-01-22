@@ -10,9 +10,9 @@ export default class Time extends Component {
     }
 
     return (
-      <div>
+      <>
         <FontAwesomeIcon icon={faClock} /> <span>{time}</span>
-      </div>
+      </>
     )
   }
 }

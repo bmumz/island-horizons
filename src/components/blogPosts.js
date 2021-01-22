@@ -18,7 +18,7 @@ const BlogPosts = () => {
   `)
 
   return (
-    <div>
+    <div className="content">
       <div className="blog">
         {" "}
         <p className="blog__recent">Recent Posts</p>

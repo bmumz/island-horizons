@@ -50,12 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [
-          "/critters/time/",
-          "/critters/month/",
-          "/critters/critters/",
-          "/404",
-        ],
+        exclude: ["/critters/time/", "/critters/month/", "/critters/", "/404"],
       },
     },
     {
@@ -67,11 +62,7 @@ module.exports = {
           {
             userAgent: "*",
             allow: "/",
-            disallow: [
-              "/critters/critters",
-              "/critters/time",
-              "/critters/month",
-            ],
+            disallow: ["/critters/critters"],
           },
         ],
       },
@@ -84,8 +75,6 @@ module.exports = {
         start_url: "/",
         background_color: "#7cbc9b",
         theme_color: "#adacac",
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "browser",
         icon: "static/icon.png",
         crossOrigin: `use-credentials`,

@@ -4,16 +4,18 @@ import Footer from "./footer"
 
 const Layout = props => {
   return (
-    <div className="layout">
-      <div>
-        <Header />
-      </div>
+    <>
+      <div className="layout">
+        <div>
+          <Header />
+        </div>
 
-      <div className="layout__blogContent">
-        {props.children}
-        <Footer />
+        <div className="layout__blogContent">
+          {props.children}
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

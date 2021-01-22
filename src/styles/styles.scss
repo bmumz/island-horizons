@@ -1,9 +1,14 @@
 @import "./base/settings";
 @import "./base/base";
-@import "./blogPost";
-@import "./footer";
-@import "./header";
-@import "./headerImg";
-@import "./layout";
-@import "./content";
-@import "./card";
+
+@import "./components/blogPost";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/headerImg";
+@import "./components/layout";
+@import "./components/content";
+@import "./components/card";
+@import "./components/search";
+@import "./components/critters";
+@import "./components/villagers";
+@import "./components/fossils";

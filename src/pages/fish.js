@@ -1,7 +1,7 @@
 import React from "react"
 import { Component } from "react"
 
-import Critters from "./critters/critters"
+import Critters from "./critters"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"

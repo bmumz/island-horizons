@@ -10,9 +10,15 @@
   background-color: rgba(255, 255, 255, 0.88);
   border-radius: 20px;
   padding: $l-size;
-  max-width: 60vw;
+  width: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .layout__blogContent {
+    width: 50vw;
+  }
 }

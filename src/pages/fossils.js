@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Search from "../components/search"
 
 export default class Fossils extends Component {
   constructor() {
@@ -62,75 +63,54 @@ export default class Fossils extends Component {
         >
           <link rel="canonical" href="https://www.islandhorizons.com"></link>
         </SEO>
-        <div className="critters">
-          <h1 className="content__title">Fossil Guide</h1>
-          <p className="content__description">
-            There are a total of{" "}
-            <i>
-              <b>73 fossils </b>{" "}
-            </i>
-            to collect in Animal Crossing: New Horizons! Each day, 4 fossils
-            will spawn on your island in the shape of a star.
-            <img
-              src={"https://i.ibb.co/WnCCsD9/fossil-Outline.jpg"}
-              alt="Fossil Outline"
-            />
-            Simply dig them up with a shovel, then bring them to your island's
-            museum to get assessed. It is recommended you donate the fossils to
-            Blathers, but, if you have duplicates, you are able to sell them for
-            some quick Bells!
-          </p>
-
+        <div className="content">
           <h1 className="content__title">List of Fossils</h1>
-        </div>
 
-        <div className="content__nav">
-          <div className="content__searchContainer">
-            <div>
-              <input
-                type="text"
+          <div className="fossils">
+            <nav>
+              <Search
                 value={this.state.search}
                 onChange={this.onSearch}
-                className="content__searchbox"
-                placeholder="Search Fossils"
-                maxLength="25"
+                placeholder="Fossils"
               />
-            </div>
-            <div className="content__sort">
-              <input
-                type="checkbox"
-                value={this.state.isSort}
-                onClick={this.onSort}
-              />{" "}
-              Sort by Price
-            </div>
-          </div>
-        </div>
+              <div className="content__sort">
+                <input
+                  type="checkbox"
+                  value={this.state.isSort}
+                  onClick={this.onSort}
+                />{" "}
+                <p> Sort by Price (Highest to Lowest)</p>
+              </div>
+            </nav>
 
-        <div className="cards">
-          {items &&
-            items.map((item, index) => (
-              <div key={index} className="card__fossils">
-                <div className="card__profile">
-                  <div className="card__name">
+            <div className="cards">
+              {items &&
+                items.map((item, index) => (
+                  <div key={index} className="card--fossil">
+                    <div className="card__profile">
+                      <h1 className="card__name--fossil">
+                        <span className="card__name--highlight">
+                          {" "}
+                          {item.name["name-USen"]}
+                        </span>
+                      </h1>
+
+                      <div>
+                        <img
+                          src={item.image_uri}
+                          alt={item.name["name-USen"]}
+                        />
+                      </div>
+                    </div>
+
                     <p>
-                      <span className="card__name--highlight">
-                        {" "}
-                        {item.name["name-USen"]}
-                      </span>
+                      <b>Sells for: </b>
+                      {item.price} Bells
                     </p>
                   </div>
-                  <div>
-                    <img src={item.image_uri} alt={item.name["name-USen"]} />
-                  </div>
-                </div>
-
-                <p className="card__info--fossils">
-                  <b>Sells for: </b>
-                  {item.price} Bells
-                </p>
-              </div>
-            ))}
+                ))}
+            </div>
+          </div>
         </div>
       </Layout>
     )

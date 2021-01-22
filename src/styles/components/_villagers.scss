@@ -1,0 +1,12 @@
+.villagers {
+  width: 75vw;
+  p {
+    font-size: $m-size;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .villagers {
+    width: 45vw;
+  }
+}

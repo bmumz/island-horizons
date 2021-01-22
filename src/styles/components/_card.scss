@@ -1,0 +1,149 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.card,
+.card--villager,
+.card--fossil {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: $s-size;
+  padding: $s-size;
+  margin: $s-size;
+  min-width: 100%;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+  }
+}
+
+.card--fossil,
+.card--villager {
+  min-width: 0;
+}
+.card__name {
+  font-family: FinkHeavy;
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+
+.card__name--highlight {
+  box-shadow: inset 0 -15px #f2d697;
+}
+
+.card__name--villager,
+.card__name--fossil {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2.5rem;
+  min-width: 10rem;
+}
+
+//new
+.card__img,
+.card__img--villager {
+  width: 25vw;
+  height: auto;
+  margin: $s-size 0;
+}
+
+.card__sell {
+  display: flex;
+  align-items: center;
+}
+
+.card__bells {
+  width: 7vw;
+  height: auto;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  margin: $m-size $s-size;
+}
+
+.card__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $s-size;
+  text-align: center;
+}
+
+.card__profile--villager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__info {
+  margin-left: $m-size;
+  font-size: 1.2rem;
+}
+
+.card__info--villagers {
+  margin-right: $m-size;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.card__content {
+  margin-bottom: $s-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .card {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card--villager {
+    min-width: 10vw;
+    max-width: 10vw;
+  }
+
+  .card__img {
+    width: 5vw;
+    height: auto;
+  }
+
+  .card__img--villager {
+    width: 7vw;
+    height: auto;
+    margin-bottom: $s-size;
+  }
+
+  .card__bells {
+    width: 1.5vw;
+    height: auto;
+  }
+
+  .card__content {
+    flex: 1;
+    margin: $m-size;
+  }
+
+  .card__profile {
+    width: 18rem;
+    flex: 1;
+  }
+
+  .card__profile--villager {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-bottom: 0.5px solid $mid-grey;
+  margin: $m-size;
+}
+
+.search__icon {
+  font-size: $m-size;
+  padding: $xs-size;
+}
+
+.search__bar {
+  width: 100%;
+  outline: none;
+  border: none;
+  text-transform: lowercase;
+  font-size: 2rem;
+  padding: $xs-size;
+  height: $l-size;
+  font-family: "FinkHeavy";
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .search__Bar {
+    width: 35vw;
+    letter-spacing: 1px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react"
 import { Component } from "react"
 import { Link } from "gatsby"
-import Critters from "./critters/critters"
+import Critters from "./critters"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -14,7 +14,6 @@ class Bugs extends Component {
     fetch("https://acnhapi.com/v1/bugs/")
       .then(response => response.json())
       .then(results => {
-        console.log(results)
         const items = Object.values(results)
         this.setState({ items })
       })

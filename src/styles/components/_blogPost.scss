@@ -1,5 +1,5 @@
 .blog {
-  padding: $s-size;
+  width: 75vw;
 }
 
 .blog__recent {
@@ -11,6 +11,7 @@
 
 .blog__title {
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .blog__titleHighlight:hover {
@@ -30,13 +31,11 @@
 
 .blog__excerpt {
   margin: 0;
-
   font-size: $m-size;
 }
 
 .blog__content {
   margin-top: $m-size;
-
   font-size: $m-size;
 
   a {
@@ -51,4 +50,10 @@
   height: 0.2px;
   border: none;
   background-color: $light-grey;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .blog {
+    width: 45vw;
+  }
 }
