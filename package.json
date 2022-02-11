@@ -36,12 +36,12 @@
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.5.16",
     "gatsby-transformer-sqip": "^2.3.38",
-    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
