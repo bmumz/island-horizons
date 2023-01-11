@@ -33,7 +33,7 @@
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-contentful": "^2.3.49",
     "gatsby-source-filesystem": "^2.3.32",
-    "gatsby-transformer-remark": "^2.8.37",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.16",
     "gatsby-transformer-sqip": "^2.3.38",
     "normalize.css": "^8.0.1",
